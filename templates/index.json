@@ -1,8 +1,19 @@
 {
-	"sections": {
-		"hero": {
-			"type": "hero"
-		}
-	},
-	"order": ["hero"]
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Gladiator collection",
+        "title_tag": "h1",
+        "body": "<p>We create iconic, quality watches, combining the best know-how of the main manufacturing districts around the world.<\/p>",
+        "button_text": "Shop now",
+        "button_url": "#",
+        "button_style": "button-accent",
+        "image": "shopify:\/\/shop_images\/Section_--_HERO.png"
+      }
+    }
+  },
+  "order": [
+    "hero"
+  ]
 }
