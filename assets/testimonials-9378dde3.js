@@ -1,1 +1,0 @@
-import{S as a}from"./swiper-6c308528.js";class l extends window.HTMLElement{constructor(){super();const t=this.querySelectorAll("[data-arrow]"),r=new a(this,{allowTouchMove:!1,speed:500});t.forEach(s=>{s.addEventListener("click",e=>{e.preventDefault();const{index:o}=e.currentTarget.dataset;r.slideTo(o)})})}}export{l as T};
