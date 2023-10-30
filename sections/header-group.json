@@ -1,11 +1,16 @@
 {
-	"type": "header",
-	"name": "Header group",
-	"sections": {
-		"header": {
-			"type": "header",
-			"settings": {}
-		}
-	},
-	"order": ["header"]
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "header",
+        "logo": "shopify:\/\/shop_images\/logo.svg"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
 }
