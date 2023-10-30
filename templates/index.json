@@ -12,6 +12,14 @@
         "image": "shopify:\/\/shop_images\/Section_--_HERO.png"
       }
     },
+    "cfcb9c51-80f6-4833-979c-bd069e6acf8b": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
+    },
     "1654caff-7930-4042-b1c0-e5759c74295a": {
       "type": "collection-grid",
       "blocks": {
@@ -73,6 +81,7 @@
   },
   "order": [
     "hero",
+    "cfcb9c51-80f6-4833-979c-bd069e6acf8b",
     "1654caff-7930-4042-b1c0-e5759c74295a"
   ]
 }
