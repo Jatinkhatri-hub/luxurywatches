@@ -36,7 +36,7 @@
   }
 
   .grid-desktop {
-    @apply grid-cols-20 grid gap-5;
+    @apply grid grid-cols-20;
   }
 
   .button,
