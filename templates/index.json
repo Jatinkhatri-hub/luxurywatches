@@ -107,6 +107,26 @@
         "whitespace_tablet": "h-10",
         "whitespace_desktop": "h-20"
       }
+    },
+    "9d7977e3-7040-4b68-b81e-1bd26888fe60": {
+      "type": "banner",
+      "settings": {
+        "title": "How we make our watches",
+        "title_tag": "h2",
+        "body": "<p>We create iconic, quality and at the same time affordable, watches, combining the best know-how of the main manufacturing districts around the world.<\/p>",
+        "button_text": "Learn more",
+        "button_url": "#",
+        "button_style": "button-accent",
+        "image": "shopify:\/\/shop_images\/Section_--_INFO.png"
+      }
+    },
+    "b9ce6a44-7431-47c3-88a6-bf35f590d9ee": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
     }
   },
   "order": [
@@ -115,6 +135,8 @@
     "1654caff-7930-4042-b1c0-e5759c74295a",
     "76eb96b5-e646-4dd4-bf0b-ed6eb906b11b",
     "60e27fb3-110a-477e-8f2a-b0a56d96cabd",
-    "99903a2d-0264-4209-8032-e39f8784ebc9"
+    "99903a2d-0264-4209-8032-e39f8784ebc9",
+    "9d7977e3-7040-4b68-b81e-1bd26888fe60",
+    "b9ce6a44-7431-47c3-88a6-bf35f590d9ee"
   ]
 }
