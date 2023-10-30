@@ -65,7 +65,7 @@
     }
   },
   "newsletter": {
-    "submit": "Subscribe",
+    "submit": "Sign up",
     "confirmation": "Thanks for subscribing",
     "submit_error": "Email address is invalid.",
     "email_placeholder": "Your email",
