@@ -1,0 +1,143 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+{%- if s.menu_left != blank or s.logo != blank or s.menu_right != blank or s.button_text != blank -%}
+  <header class='flex h-20 items-center shadow-sm'>
+    <div class='container-content grid grid-cols-12'>
+      <nav class='col-span-5'>
+        <ul class='flex h-full items-center space-x-10 text-menu uppercase'>
+          {%- if s.menu_left != blank -%}
+            {% for link in linklists[s.menu_left].links -%}
+              <li class='{%- if link.links != blank -%}flex items-center group relative h-full{%- endif -%}'>
+                <a
+                  class='animated-link flex items-center space-x-1.5'
+                  href='{{- link.url -}}'
+                >
+                  <span>
+                    {{- link.title -}}
+                  </span>
+                  {%- if link.links != blank -%}
+                    <span>
+                      <div class='mt-1 h-3 w-3'>
+                        {%- render 'icon',
+                          icon: 'icon-down',
+                          class: 'group-hover:rotate-180 transition-transform duration-300'
+                        -%}
+                      </div>
+                    </span>
+                  {%- endif -%}
+                </a>
+
+                {%- if link.links != blank -%}
+                  <ul class='animation-appereance pointer-events-none absolute top-12 w-full rounded-sm bg-white p-4 text-menu-sm opacity-0 shadow-sm group-hover:pointer-events-auto group-hover:opacity-100'>
+                    {%- for child_link in link.links -%}
+                      <li>
+                        <a class='animated-link' href='{{- child_link.url -}}'>
+                          {{- child_link.title -}}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor %}
+          {%- endif -%}
+        </ul>
+      </nav>
+
+      <div class='col-span-2 flex justify-center'>
+        {%- if s.logo != blank -%}
+          <a class='w-full max-w-[8.75rem]' href='/'>
+            {%- render 'component.image', image: s.logo, class: '!object-contain' -%}
+          </a>
+        {%- endif -%}
+      </div>
+
+      <div class='col-span-5 flex items-center justify-end space-x-10 text-menu uppercase'>
+        {%- if s.menu_right != blank or s.button_text != blank -%}
+          {% for link in linklists[s.menu_right].links -%}
+            <a
+              class='animated-link'
+              href='{{- link.url -}}'
+            >
+              {{- link.title -}}
+            </a>
+          {%- endfor %}
+        {%- endif -%}
+
+        {%- if s.button_text != blank -%}
+          <button
+            class='{{- s.button_style -}}'
+            href='{{- s.button_url -}}'
+          >
+            {{- s.button_text -}}
+          </button>
+        {%- endif -%}
+      </div>
+    </div>
+  </header>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "sticky top-0 z-50 bg-white",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu_left",
+      "label": "Left Menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_right",
+      "label": "Right Menu"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "default": "button-primary",
+      "options": [
+        {
+          "value": "button-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "button-white",
+          "label": "White"
+        },
+        {
+          "value": "button-accent",
+          "label": "Accent"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

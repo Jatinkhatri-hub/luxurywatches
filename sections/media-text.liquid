@@ -1,0 +1,203 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}' class='py-20'>
+  <div
+    class='container-content grid grid-cols-12'
+  >
+    <div class='col-span-6 {% if s.image_alignment == 'left' %}pr-14 col-start-1{% else %}col-start-7 row-start-1 pl-14{% endif %}'>
+      {%- if s.image != blank -%}
+        {%- render 'component.image', image: s.image -%}
+      {%- endif -%}
+    </div>
+
+    <div class='col-span-6 flex flex-col justify-center space-y-6 {% if s.image_alignment == 'right' %} col-start-1 {% endif %}''>
+      {%- if s.title != blank -%}
+        <{{ s.title_tag }} class='text-heading-3 {{ s.text_alignment }}'>{{- s.title -}}</{{ s.title_tag }}>
+      {%- endif -%}
+
+      {%- if s.body != blank -%}
+        <div class='text-body-sm opacity-60 {{ s.text_alignment }}'>{{- s.body -}}</div>
+      {%- endif -%}
+
+      {%- if s.button_url != blank and s.button_text != blank -%}
+				<div class='flex {{ s.button_alignment }}'>
+					<button href='{{- s.button_url -}}' class='{{- s.button_style }} w-fit'>
+						{{- s.button_text -}}
+					</button>
+				</div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Media & Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "default": "button-accent",
+      "options": [
+        {
+          "value": "button-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "button-white",
+          "label": "White"
+        },
+        {
+          "value": "button-accent",
+          "label": "Accent"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Appereance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFF4F6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "text-left",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ]
+    },
+		{
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Button alignment",
+      "default": "justify-start",
+      "options": [
+        {
+          "value": "justify-start",
+          "label": "Left"
+        },
+        {
+          "value": "justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-end",
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media & Text"
+    }
+  ]
+}
+{% endschema %}

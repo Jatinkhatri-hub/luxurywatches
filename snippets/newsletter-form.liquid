@@ -1,0 +1,60 @@
+{% form 'customer', class: '' %}
+  <input type='hidden' name='contact[tags]' value='newsletter'>
+  <div
+    class=''
+  >
+    <div>
+      <label class='mb-5 block text-body-sm font-bold uppercase' for='newsletter'>
+        {{- 'newsletter.email_label' | t -}}
+      </label>
+
+      <div class='relative flex border-b border-primary pb-2'>
+        <input
+          id='newsletter'
+          type='email'
+          name='contact[email]'
+          class='mr-4 w-full text-body-sm outline-none'
+          value='{{ form.email }}'
+          aria-required='true'
+          autocorrect='off'
+          autocapitalize='off'
+          autocomplete='email'
+          {% if form.errors %}
+            autofocus
+            aria-invalid='true'
+            aria-describedby='newsletter-error'
+          {% elsif form.posted_successfully? %}
+            aria-describedby='newsletter-success'
+          {% endif %}
+          placeholder='{{- 'newsletter.email_placeholder' | t -}}'
+          required
+        >
+        <button
+          type='submit'
+          class='text-body-sm uppercase'
+          name='commit'
+          aria-label='subscribe'
+        >
+          {{- 'newsletter.submit' | t -}}
+        </button>
+      </div>
+    </div>
+    {%- if form.errors -%}
+      <small class='' id='newsletter-error'>
+        {%- render 'icon', icon: 'icon-error' -%}
+        {{- form.errors.translated_fields.email | capitalize }}
+        {{ form.errors.messages.email -}}
+      </small>
+    {%- endif -%}
+  </div>
+  {%- if form.posted_successfully? -%}
+    <h3
+      class=' mt-2 flex'
+      id='newsletter-success'
+      tabindex='-1'
+    >
+      {%- render 'icon', icon: 'icon-success', class: 'w-6 h-6 mr-2' -%}
+      <span class='text-body-sm opacity-60'>{{- 'newsletter.confirmation' | t -}}</span>
+    </h3>
+  {%- endif -%}
+{% endform %}

@@ -1,0 +1,70 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='{{ s.whitespace_mobile }} {{ s.whitespace_tablet }} {{ s.whitespace_desktop }}'></div>
+
+{% schema %}
+{
+  "name": "Whitespace",
+  "settings": [
+    {
+      "type": "select",
+      "id": "whitespace_mobile",
+      "label": "Whitespace Mobile",
+      "default": "h-10",
+      "options": [
+        {
+          "value": "h-6",
+          "label": "24px"
+        },
+        {
+          "value": "h-10",
+          "label": "40px"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "whitespace_tablet",
+      "label": "Whitespace Tablet",
+      "default": "h-10",
+      "options": [
+        {
+          "value": "h-6",
+          "label": "24px"
+        },
+        {
+          "value": "h-10",
+          "label": "40px"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "whitespace_desktop",
+      "label": "Whitespace Desktop",
+      "default": "h-20",
+      "options": [
+        {
+          "value": "h-6",
+          "label": "24px"
+        },
+        {
+          "value": "h-10",
+          "label": "40px"
+        },
+        {
+          "value": "h-20",
+          "label": "80px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Whitespace"
+    }
+  ]
+}
+{% endschema %}

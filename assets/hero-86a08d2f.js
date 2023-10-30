@@ -1,0 +1,1 @@
+import{S as n}from"./swiper-6c308528.js";class d extends window.HTMLElement{constructor(){super();const t=this.querySelectorAll("[data-dot]"),s=new n(this,{allowTouchMove:!1,speed:500});t.forEach(o=>{o.addEventListener("click",e=>{e.preventDefault();const{index:r}=e.currentTarget.dataset;s.slideTo(r)})})}}export{d as H};

@@ -1,0 +1,86 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='container-content'>
+  <div
+    style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'
+    class='relative p-16'
+  >
+    <div class='absolute inset-0 w-full'>
+      {%- render 'component.image', image: s.background_image -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class='relative flex justify-center gap-8'>
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign b = block.settings
+          -%}
+
+          <div class='flex-1'>
+            {%- if b.title != blank -%}
+              <div class='mb-3 text-center text-counter'>{{- b.title -}}</div>
+            {%- endif -%}
+
+            {%- if b.body != blank -%}
+              <div class='text-center text-body'>{{- b.body -}}</div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About us",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#E19AA6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "items",
+      "name": "item",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About us"
+    }
+  ]
+}
+{% endschema %}

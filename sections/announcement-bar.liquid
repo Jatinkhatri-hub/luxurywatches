@@ -1,0 +1,53 @@
+{% liquid
+  assign s = section.settings
+%}
+
+{%- if s.richtext != blank -%}
+  <div
+    style='
+      background-color: {{- s.bg_color -}};
+      color: {{- s.text_color -}}
+    '
+    class='text-announcement py-4 text-center uppercase'
+  >
+    {{- s.richtext -}}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Promotion Text"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

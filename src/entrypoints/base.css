@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply h-full font-body text-base text-accent antialiased;
+	}
+
+	model-viewer {
+		@apply aspect-square h-fit;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-heading;
+	}
+
+	body {
+		@apply font-body text-black;
+	}
+}
+
+@layer components {
+	.container-full {
+		@apply w-full px-5;
+	}
+
+	.button,
+	button {
+	}
+
+	.animated-link {
+		@apply relative cursor-pointer transition-all duration-300 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-accent hover:after:w-full;
+	}
+
+	.button-primary {
+	}
+
+	.button-white {
+	}
+
+	.button-accent {
+		/* @apply border border-accent bg-accent px-6 py-4 text-button-sm text-white transition-all duration-300 hover:bg-transparent hover:text-accent; */
+	}
+
+	.animation-appereance {
+		@apply transition-all duration-300;
+	}
+}

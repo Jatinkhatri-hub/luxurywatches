@@ -1,0 +1,31 @@
+<div class='flex space-x-2'>
+  {%- if settings.amex_enabled -%}
+    <div class='w-8'>
+      {%- render 'payment-icon', icon: 'amex' -%}
+    </div>
+  {%- endif -%}
+
+  {%- if settings.diner_enabled -%}
+    <div class='w-8'>
+      {%- render 'payment-icon', icon: 'diner' -%}
+    </div>
+  {%- endif -%}
+
+  {%- if settings.discover_enabled -%}
+    <div class='w-8'>
+      {%- render 'payment-icon', icon: 'discover' -%}
+    </div>
+  {%- endif -%}
+
+  {%- if settings.mastercard_enabled -%}
+    <div class='w-8'>
+      {%- render 'payment-icon', icon: 'mastercard' -%}
+    </div>
+  {%- endif -%}
+
+  {%- if settings.visa_enabled -%}
+    <div class='w-8'>
+      {%- render 'payment-icon', icon: 'visa' -%}
+    </div>
+  {%- endif -%}
+</div>

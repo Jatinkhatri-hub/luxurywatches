@@ -1,0 +1,169 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+{%- if section.blocks.size > 0 -%}
+  <div class='py-20' style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'>
+    <testimonial-slider class='swiper h-full w-full overflow-hidden'>
+      <div class='swiper-wrapper flex items-center'>
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign b = block.settings
+          -%}
+
+          <div class='swiper-slide shrink-0'>
+            <div class='container-content mx-auto grid grid-cols-12'>
+              <div class='col-span-6 flex flex-col justify-center'>
+                <div class='mb-10 flex space-x-2'>
+                  {%- for i in (1..b.rating) -%}
+                    {%- render 'icon', icon: 'rating' -%}
+                  {%- endfor -%}
+                </div>
+                {%- if b.review != blank -%}
+                  <div class='mb-10 pr-10 text-heading-2'>
+                    {{- b.review -}}
+                  </div>
+                {%- endif -%}
+
+                <div class='flex items-center justify-between pr-10'>
+                  <div class='flex items-center'>
+                    {%- if b.avatar != blank -%}
+                      <div class='h-14 w-14 overflow-hidden rounded-full'>
+                        {%- render 'component.image', image: b.avatar -%}
+                      </div>
+                    {%- endif -%}
+
+                    {%- if b.name != blank or b.location != blank -%}
+                      <div class='ml-4 flex flex-col space-y-2'>
+                        <span class='text-label-1'>{{- b.name -}}</span>
+                        <span class='text-label-2'>{{- b.location -}}</span>
+                      </div>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if section.blocks.size > 1 -%}
+                    <div class='flex space-x-8'>
+                      {%- liquid
+                        assign prev_index = forloop.index0 | minus: 1
+                        assign next_index = forloop.index0 | plus: 1
+
+                        if forloop.index0 == 0
+                          assign prev_index = 0
+                        else
+                          assign prev_index = forloop.index0 | minus: 1
+                        endif
+                      -%}
+
+                      <button
+                        data-arrow
+                        data-index='{{- prev_index -}}'
+                        class='animation-appereance rounded-full bg-white p-4 text-primary hover:bg-primary hover:text-white'
+                      >
+                        {%- render 'icon', icon: 'arrow-left' -%}
+                      </button>
+                      <button
+                        data-arrow
+                        data-index='{{- next_index -}}'
+                        class='animation-appereance rounded-full bg-white p-4 text-primary hover:bg-primary hover:text-white'
+                      >
+                        {%- render 'icon', icon: 'arrow-right' -%}
+                      </button>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+              {%- if b.media != blank -%}
+                <div class='col-span-6'>
+                  {%- render 'component.image', image: b.media -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </testimonial-slider>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Appereance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#E19AA6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Testimonial",
+      "type": "testimonial",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Testimonial Content"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "review",
+          "label": "Review Text"
+        },
+        {
+          "type": "header",
+          "content": "Author"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "location",
+          "label": "Location"
+        },
+        {
+          "type": "header",
+          "content": "Media"
+        },
+        {
+          "type": "image_picker",
+          "id": "media",
+          "label": "Media"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

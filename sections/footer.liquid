@@ -1,0 +1,149 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<footer class='container-content grid grid-cols-12 gap-6 py-12'>
+  {%- if s.footer_logo != blank or s.footer_content != blank -%}
+    <div class='col-span-5 max-w-sm'>
+      <a href='/' class='mb-6 block max-w-[10rem]'>
+        {%- render 'component.image', image: s.footer_logo -%}
+      </a>
+      <div class='text-body-sm opacity-60'>
+        {{- s.footer_content -}}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if s.services != blank -%}
+    <div class='col-span-2'>
+      <{{ s.title_tag }} class='mb-4 text-body-sm uppercase tracking-[.5px] opacity-60'>
+        {{- linklists[s.services].title -}}
+      </{{ s.title_tag }}>
+
+      <ul class='space-y-3'>
+        {% for link in linklists[s.services].links -%}
+          <li class='animated-link w-fit text-body-sm opacity-60'>
+            <a href='{{- link.url -}}'>{{- link.title -}}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  {%- if s.company != blank -%}
+    <div class='col-span-2'>
+      <{{ s.title_tag }} class='mb-4 text-body-sm uppercase tracking-[.5px] opacity-60'>
+        {{- linklists[s.company].title -}}
+      </{{ s.title_tag }}>
+
+      <ul class='space-y-3'>
+        {% for link in linklists[s.company].links -%}
+          <li class='animated-link w-fit text-body-sm opacity-60'>
+            <a href='{{- link.url -}}'>{{- link.title -}}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  <div class='col-span-3'>
+    <{{ s.title_tag }} class='mb-4 text-body-sm uppercase tracking-[.5px] opacity-60'>
+      {{- s.newsletter_heading -}}
+    </{{ s.title_tag }}>
+
+    {%- render 'newsletter-form' -%}
+  </div>
+
+  <div class='col-span-full mt-20 flex items-end justify-between'>
+    <div class='text-body-sm opacity-60'>{{- s.copyright -}}</div>
+
+    {%- render 'payment-icons' -%}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Footer Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_content",
+      "label": "Footer Content"
+    },
+    {
+      "type": "link_list",
+      "id": "services",
+      "label": "Services Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "company",
+      "label": "Company Menu"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_heading",
+      "label": "Newsletter Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "copyright",
+      "label": "Footer copyright"
+    },
+    {
+      "type": "header",
+      "content": "Footer settings"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}

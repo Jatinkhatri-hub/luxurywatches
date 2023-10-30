@@ -1,0 +1,164 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='container-content'>
+  <div
+    style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'
+    class='grid grid-cols-12 px-0'
+  >
+    {%- if s.image != blank -%}
+      <div class='{% if s.content_size == 'small' %}col-span-8{% else %}col-span-7{% endif %}'>
+        {%- render 'component.image', image: s.image -%}
+      </div>
+    {%- endif -%}
+
+    <div class='flex flex-col justify-center px-14 py-10 {% if s.content_size == 'small' %}col-span-4{% else %}col-span-5{% endif %}'>
+      {%- if s.title != blank -%}
+        <{{ s.title_tag }} class='mb-4 text-heading-2'>
+          {{- s.title -}}
+        </{{ s.title_tag }}>
+      {%- endif -%}
+
+      {%- if s.body != blank -%}
+        <div class='mb-4 text-body-sm'>{{- s.body -}}</div>
+      {%- endif -%}
+
+      {%- if s.button_text != blank and s.button_url != blank -%}
+        <button href='{{- s.button_url -}}' class='{{- s.button_style }} w-fit'>
+          {{- s.button_text -}}
+        </button>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTA Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "default": "button-accent",
+      "options": [
+        {
+          "value": "button-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "button-white",
+          "label": "White"
+        },
+        {
+          "value": "button-accent",
+          "label": "Accent"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#EEF2F1"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "content_size",
+      "label": "Content size",
+      "default": "small",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CTA Banner"
+    }
+  ]
+}
+{% endschema %}
