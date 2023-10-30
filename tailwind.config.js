@@ -85,6 +85,10 @@ module.exports = {
       gridTemplateColumns: {
         20: 'repeat(20, minmax(0, 1fr))',
       },
+      backgroundImage: {
+        'gradient-primary':
+          'linear-gradient(0deg, rgba(25, 225, 252, 0.30) 3.07%, rgba(1, 1, 1, 0.00) 73.13%)',
+      },
     },
   },
   plugins: [

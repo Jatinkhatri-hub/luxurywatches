@@ -4,16 +4,12 @@
     class=''
   >
     <div>
-      <label class='mb-5 block text-body-sm font-bold uppercase' for='newsletter'>
-        {{- 'newsletter.email_label' | t -}}
-      </label>
-
-      <div class='relative flex border-b border-primary pb-2'>
+      <div class='relative flex'>
         <input
           id='newsletter'
           type='email'
           name='contact[email]'
-          class='mr-4 w-full text-body-sm outline-none'
+          class='w-full rounded-bl rounded-tl bg-primary bg-opacity-30 p-5 text-body-sm outline-none'
           value='{{ form.email }}'
           aria-required='true'
           autocorrect='off'
@@ -31,7 +27,7 @@
         >
         <button
           type='submit'
-          class='text-body-sm uppercase'
+          class='rounded-bl-none rounded-tl-none border-none bg-accent text-button uppercase text-primary'
           name='commit'
           aria-label='subscribe'
         >

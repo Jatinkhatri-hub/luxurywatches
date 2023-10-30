@@ -1,0 +1,84 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='container-full'>
+  <div class='relative overflow-hidden rounded bg-primary py-20'>
+    <div class='bg-gradient-primary absolute inset-0 h-full w-full'></div>
+
+    <div class='mx-auto max-w-xl text-center text-white'>
+      <{{ s.title_tag }} class='mb-2 text-heading-3'>{{ s.title }}</{{ s.title_tag }}>
+
+      <div class='mb-10 text-center text-body-sm text-white opacity-70'>
+        {{- s.body -}}
+      </div>
+
+      <div>
+        {%- render 'newsletter-form' -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}
