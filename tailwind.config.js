@@ -31,7 +31,7 @@ module.exports = {
           },
         ],
         'heading-4': [
-          '40x',
+          '40px',
           {
             lineHeight: '100%',
           },
@@ -80,6 +80,7 @@ module.exports = {
         accent: 'hsla(var(--color-accent) / <alpha-value>)',
         primary: 'hsla(var(--color-primary) / <alpha-value>)',
         secondary: 'hsla(var(--color-secondary) / <alpha-value>)',
+        grey: '#F2F2F2',
       },
       gridTemplateColumns: {
         20: 'repeat(20, minmax(0, 1fr))',

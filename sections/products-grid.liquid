@@ -1,0 +1,84 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='container-full'>
+  <{{ s.title_tag }} class='mb-10 text-center text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
+
+  <div class='grid-desktop gap-5'>
+    {%- for product in s.products -%}
+      <div class='bg-grey relative col-span-4 rounded'>
+        <a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
+        {%- render 'component.image', image: product.featured_image, class: 'mix-blend-multiply' -%}
+
+        <div class='bg-grey p-5 text-body'>
+          <h3 class='mb-2 font-body text-primary'>{{- product.title -}}</h3>
+          <p class='text-secondary'>{{- product.price | money -}}</p>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Products grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Product list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products grid"
+    }
+  ]
+}
+{% endschema %}
