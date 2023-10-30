@@ -2,32 +2,24 @@
   assign s = section.settings
 -%}
 
-<div style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}' class='py-20'>
-  <div
-    class='container-content grid grid-cols-12'
-  >
-    <div class='col-span-6 {% if s.image_alignment == 'left' %}pr-14 col-start-1{% else %}col-start-7 row-start-1 pl-14{% endif %}'>
-      {%- if s.image != blank -%}
-        {%- render 'component.image', image: s.image -%}
-      {%- endif -%}
+<div
+  class='container-full rounded'
+>
+  <div class='grid-desktop' style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'>
+    <div class='col-span-10 {% if s.image_alignment == 'right'%}col-start-11 row-start-1{% endif %}'>
+      {%- render 'component.image', image: s.image -%}
     </div>
 
-    <div class='col-span-6 flex flex-col justify-center space-y-6 {% if s.image_alignment == 'right' %} col-start-1 {% endif %}''>
-      {%- if s.title != blank -%}
-        <{{ s.title_tag }} class='text-heading-3 {{ s.text_alignment }}'>{{- s.title -}}</{{ s.title_tag }}>
-      {%- endif -%}
+    <div class='col-span-10 {% if s.image_alignment == 'right'%}col-start-1 row-start-1{% endif %}'>
+      <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center p-5 text-center'>
+        <{{ s.title_tag }} class='mb-2 text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
 
-      {%- if s.body != blank -%}
-        <div class='text-body-sm opacity-60 {{ s.text_alignment }}'>{{- s.body -}}</div>
-      {%- endif -%}
+        <div class='mb-6 text-body-sm opacity-60'>{{- s.body -}}</div>
 
-      {%- if s.button_url != blank and s.button_text != blank -%}
-				<div class='flex {{ s.button_alignment }}'>
-					<button href='{{- s.button_url -}}' class='{{- s.button_style }} w-fit'>
-						{{- s.button_text -}}
-					</button>
-				</div>
-      {%- endif -%}
+        <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
+          {{- s.button_text -}}
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -129,7 +121,7 @@
       "type": "color",
       "id": "background_color",
       "label": "Background color",
-      "default": "#FFF4F6"
+      "default": "#F2F2F2"
     },
     {
       "type": "color",
@@ -149,46 +141,6 @@
         },
         {
           "value": "right",
-          "label": "Right"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "text_alignment",
-      "label": "Text alignment",
-      "default": "text-left",
-      "options": [
-        {
-          "value": "text-left",
-          "label": "Left"
-        },
-        {
-          "value": "text-center",
-          "label": "Center"
-        },
-        {
-          "value": "text-right",
-          "label": "Right"
-        }
-      ]
-    },
-		{
-      "type": "select",
-      "id": "button_alignment",
-      "label": "Button alignment",
-      "default": "justify-start",
-      "options": [
-        {
-          "value": "justify-start",
-          "label": "Left"
-        },
-        {
-          "value": "justify-center",
-          "label": "Center"
-        },
-        {
-          "value": "justify-end",
           "label": "Right"
         }
       ]
