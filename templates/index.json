@@ -204,6 +204,14 @@
         "title_tag": "h2",
         "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>"
       }
+    },
+    "9fddbb3e-624f-4d60-9adf-44d4bfc293d8": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
     }
   },
   "order": [
@@ -221,6 +229,7 @@
     "71f9f276-272c-4148-8a12-06936487bceb",
     "21ba022b-8871-4a85-90db-c9ffa0f22710",
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02",
-    "6ccb25f7-4702-485d-a9e6-ec531cc86368"
+    "6ccb25f7-4702-485d-a9e6-ec531cc86368",
+    "9fddbb3e-624f-4d60-9adf-44d4bfc293d8"
   ]
 }
