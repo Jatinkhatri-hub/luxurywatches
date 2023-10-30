@@ -1,5 +1,13 @@
 {
   "current": {
+    "accent_color": "#48faf9",
+    "primary_color": "#0a0a0a",
+    "secondary_color": "#d2a567",
+    "type_heading": "dm_sans_n4",
+    "type_body": "dm_sans_n4",
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
