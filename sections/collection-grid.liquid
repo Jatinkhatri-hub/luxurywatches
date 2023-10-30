@@ -1,0 +1,139 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class='container-full grid-desktop text-white'>
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign b = block.settings
+    -%}
+
+    <div class='relative col-span-5 overflow-hidden rounded'>
+      {%- render 'component.image', image: b.image, lazyload: false -%}
+
+      <div class='absolute top-6 w-full text-center text-body-sm'>
+        {{- b.subtitle -}}
+      </div>
+
+      <div class='absolute bottom-8 w-full'>
+        <{{ s.title_tag }} class='mb-4 text-center text-heading-5'>
+          {{- b.title -}}
+        </{{ s.title_tag }}>
+
+        <button href='{{- b.button_url -}}' class='{{- b.button_style }} mx-auto flex'>
+          {{- b.button_text -}}
+        </button>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection-grid",
+      "name": "Collection grid",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "default": "button-accent",
+          "options": [
+            {
+              "value": "button-primary",
+              "label": "Primary"
+            },
+            {
+              "value": "button-white",
+              "label": "White"
+            },
+            {
+              "value": "button-accent",
+              "label": "Accent"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection grid"
+    }
+  ]
+}
+{% endschema %}
