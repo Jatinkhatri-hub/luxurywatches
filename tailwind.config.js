@@ -40,6 +40,7 @@ module.exports = {
           '30px',
           {
             lineHeight: '100%',
+            letterSpacing: '1.8px',
           },
         ],
         'body-sm': [
@@ -71,7 +72,7 @@ module.exports = {
           '12px',
           {
             lineHeight: '100%',
-            letterSpacing: '8%',
+            letterSpacing: '0.96px',
           },
         ],
       },
@@ -79,6 +80,9 @@ module.exports = {
         accent: 'hsla(var(--color-accent) / <alpha-value>)',
         primary: 'hsla(var(--color-primary) / <alpha-value>)',
         secondary: 'hsla(var(--color-secondary) / <alpha-value>)',
+      },
+      gridTemplateColumns: {
+        20: 'repeat(20, minmax(0, 1fr))',
       },
     },
   },

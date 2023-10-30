@@ -5,7 +5,7 @@
 @layer base {
   @font-face {
     font-family: 'bebas';
-    src: url('../../assets/bebas.woff2') format('woff2');
+    src: url('../../fonts/bebas.woff2') format('woff2');
   }
 
   html {
@@ -32,7 +32,11 @@
 
 @layer components {
   .container-full {
-    @apply w-full px-5;
+    @apply mx-auto w-full px-5;
+  }
+
+  .grid-desktop {
+    @apply grid-cols-20 grid gap-5;
   }
 
   .button,
