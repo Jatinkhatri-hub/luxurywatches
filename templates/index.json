@@ -11,9 +11,68 @@
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Section_--_HERO.png"
       }
+    },
+    "1654caff-7930-4042-b1c0-e5759c74295a": {
+      "type": "collection-grid",
+      "blocks": {
+        "98a177d4-321b-45e6-8b95-ba4118aeeca0": {
+          "type": "collection-grid",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Category_Card.png",
+            "subtitle": "<p>20 Watches<\/p>",
+            "title": "WOMEN WATCHES",
+            "button_text": "Shop now",
+            "button_url": "#",
+            "button_style": "button-accent"
+          }
+        },
+        "f2c48216-0c4b-4c52-b27b-dded2bda7621": {
+          "type": "collection-grid",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Category_Card_1.png",
+            "subtitle": "<p>18 Watches<\/p>",
+            "title": "premium watches",
+            "button_text": "Shop now",
+            "button_url": "#",
+            "button_style": "button-accent"
+          }
+        },
+        "409f0b96-4d41-4285-aec3-a2c37cd49899": {
+          "type": "collection-grid",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Category_Card_2.png",
+            "subtitle": "<p>18 Watches<\/p>",
+            "title": "racing watches",
+            "button_text": "Shop now",
+            "button_url": "#",
+            "button_style": "button-accent"
+          }
+        },
+        "265f7b0e-5a10-4bb4-a5c0-eb22fb12598e": {
+          "type": "collection-grid",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Category_Card_3.png",
+            "subtitle": "<p>18 Watches<\/p>",
+            "title": "eyeweAR",
+            "button_text": "Shop now",
+            "button_url": "#",
+            "button_style": "button-accent"
+          }
+        }
+      },
+      "block_order": [
+        "98a177d4-321b-45e6-8b95-ba4118aeeca0",
+        "f2c48216-0c4b-4c52-b27b-dded2bda7621",
+        "409f0b96-4d41-4285-aec3-a2c37cd49899",
+        "265f7b0e-5a10-4bb4-a5c0-eb22fb12598e"
+      ],
+      "settings": {
+        "title_tag": "h2"
+      }
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "1654caff-7930-4042-b1c0-e5759c74295a"
   ]
 }
