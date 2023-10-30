@@ -10,7 +10,7 @@
       </a>
 
       <nav class=''>
-        <ul class='flex h-full items-center space-x-10 text-menu uppercase'>
+        <ul class='flex h-full items-center space-x-4 text-menu uppercase'>
           {%- if s.menu != blank -%}
             {% for link in linklists[s.menu].links -%}
               <li class='{%- if link.links != blank -%}flex items-center group relative h-full{%- endif -%}'>
@@ -23,7 +23,7 @@
                   </span>
                   {%- if link.links != blank -%}
                     <span>
-                      <div class='mt-1 h-3 w-3'>
+                      <div class=''>
                         {%- render 'icon',
                           icon: 'icon-down',
                           class: 'group-hover:rotate-180 transition-transform duration-300'
@@ -34,10 +34,10 @@
                 </a>
 
                 {%- if link.links != blank -%}
-                  <ul class='animation-appereance pointer-events-none absolute top-12 w-full rounded-sm bg-white p-4 text-menu-sm opacity-0 shadow-sm group-hover:pointer-events-auto group-hover:opacity-100'>
+                  <ul class='animation-appereance pointer-events-none absolute -left-[15%] top-8 w-[130%] space-y-4 rounded bg-white p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100'>
                     {%- for child_link in link.links -%}
                       <li>
-                        <a class='animated-link' href='{{- child_link.url -}}'>
+                        <a class='animated-link text-[12px]' href='{{- child_link.url -}}'>
                           {{- child_link.title -}}
                         </a>
                       </li>
