@@ -138,7 +138,7 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#F2F2F2",
+        "background_color": "#f2f2f2",
         "text_color": "#000000",
         "image_alignment": "left"
       }
@@ -161,7 +161,7 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#F2F2F2",
+        "background_color": "#f2f2f2",
         "text_color": "#000000",
         "image_alignment": "right"
       }
@@ -184,9 +184,25 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#F2F2F2",
+        "background_color": "#f2f2f2",
         "text_color": "#000000",
         "image_alignment": "left"
+      }
+    },
+    "e5b72d81-bbe3-4b95-bd23-0fe714878f02": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
+    },
+    "6ccb25f7-4702-485d-a9e6-ec531cc86368": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Subscribe to the latest news",
+        "title_tag": "h2",
+        "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>"
       }
     }
   },
@@ -203,6 +219,8 @@
     "198bc1e7-4444-4302-b1dd-a22639fdf34e",
     "a10553a1-13d9-4c44-8a28-456fb6c1ba5e",
     "71f9f276-272c-4148-8a12-06936487bceb",
-    "21ba022b-8871-4a85-90db-c9ffa0f22710"
+    "21ba022b-8871-4a85-90db-c9ffa0f22710",
+    "e5b72d81-bbe3-4b95-bd23-0fe714878f02",
+    "6ccb25f7-4702-485d-a9e6-ec531cc86368"
   ]
 }
