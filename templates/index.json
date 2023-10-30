@@ -77,11 +77,44 @@
       "settings": {
         "title_tag": "h2"
       }
+    },
+    "76eb96b5-e646-4dd4-bf0b-ed6eb906b11b": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
+    },
+    "60e27fb3-110a-477e-8f2a-b0a56d96cabd": {
+      "type": "products-grid",
+      "settings": {
+        "title": "OUR BEST SELLERS",
+        "title_tag": "h2",
+        "products": [
+          "nereide-avventurina",
+          "nereide-avventurina-1",
+          "nereide-avventurina-2",
+          "copy-of-nereide-avventurina",
+          "nereide-avventurina-3"
+        ]
+      }
+    },
+    "99903a2d-0264-4209-8032-e39f8784ebc9": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "h-10",
+        "whitespace_desktop": "h-20"
+      }
     }
   },
   "order": [
     "hero",
     "cfcb9c51-80f6-4833-979c-bd069e6acf8b",
-    "1654caff-7930-4042-b1c0-e5759c74295a"
+    "1654caff-7930-4042-b1c0-e5759c74295a",
+    "76eb96b5-e646-4dd4-bf0b-ed6eb906b11b",
+    "60e27fb3-110a-477e-8f2a-b0a56d96cabd",
+    "99903a2d-0264-4209-8032-e39f8784ebc9"
   ]
 }
