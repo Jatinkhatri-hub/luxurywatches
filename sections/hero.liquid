@@ -2,10 +2,24 @@
   assign s = section.settings
 -%}
 
-<div class='container-full rounded'>
+<div class='container-full relative overflow-hidden rounded'>
   {%- if s.image -%}
     {%- render 'component.image', image: s.image -%}
   {%- endif -%}
+
+  <div class='absolute bottom-10 left-1/2 max-w-3xl -translate-x-1/2 py-10 text-center text-white'>
+    {%- if s.title != blank -%}
+      <{{ s.title_tag }} class='text-heading-1'>{{ s.title }}</{{ s.title_tag }}>
+
+      <div class='mx-auto mb-6 max-w-[40rem] text-body'>
+        {{- s.body -}}
+      </div>
+
+      <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
+        {{- s.button_text -}}
+      </button>
+    {%- endif -%}
+  </div>
 </div>
 
 {% schema %}
