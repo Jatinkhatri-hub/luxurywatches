@@ -4,11 +4,15 @@
 
 {%- if s.menu_left != blank or s.logo != blank or s.menu_right != blank or s.button_text != blank -%}
   <header class='flex h-20 items-center shadow-sm'>
-    <div class='container-content grid grid-cols-12'>
-      <nav class='col-span-5'>
+    <div class='container-full flex justify-between'>
+      <a class='w-full max-w-[8.75rem]' href='/'>
+        {%- render 'component.image', image: s.logo, class: '!object-contain' -%}
+      </a>
+
+      <nav class=''>
         <ul class='flex h-full items-center space-x-10 text-menu uppercase'>
-          {%- if s.menu_left != blank -%}
-            {% for link in linklists[s.menu_left].links -%}
+          {%- if s.menu != blank -%}
+            {% for link in linklists[s.menu].links -%}
               <li class='{%- if link.links != blank -%}flex items-center group relative h-full{%- endif -%}'>
                 <a
                   class='animated-link flex items-center space-x-1.5'
@@ -46,34 +50,22 @@
         </ul>
       </nav>
 
-      <div class='col-span-2 flex justify-center'>
-        {%- if s.logo != blank -%}
-          <a class='w-full max-w-[8.75rem]' href='/'>
-            {%- render 'component.image', image: s.logo, class: '!object-contain' -%}
-          </a>
-        {%- endif -%}
-      </div>
+      <div class='flex items-center gap-1'>
+        <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path d="M16.9269 17.0401L20.4 20.4001M19.28 11.4401C19.28 15.77 15.7699 19.2801 11.44 19.2801C7.11009 19.2801 3.60001 15.77 3.60001 11.4401C3.60001 7.11019 7.11009 3.6001 11.44 3.6001C15.7699 3.6001 19.28 7.11019 19.28 11.4401Z" stroke="#0A0A0A" stroke-linecap="round"/>
+        </svg>
 
-      <div class='col-span-5 flex items-center justify-end space-x-10 text-menu uppercase'>
-        {%- if s.menu_right != blank or s.button_text != blank -%}
-          {% for link in linklists[s.menu_right].links -%}
-            <a
-              class='animated-link'
-              href='{{- link.url -}}'
-            >
-              {{- link.title -}}
-            </a>
-          {%- endfor %}
-        {%- endif -%}
+        <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80641 6.20635C4.70654 5.30649 5.92722 4.80097 7.20001 4.80097C8.47279 4.80097 9.69347 5.30649 10.5936 6.20635L12 7.61155L13.4064 6.20635C13.8492 5.7479 14.3788 5.38223 14.9645 5.13066C15.5501 4.8791 16.1799 4.74669 16.8173 4.74115C17.4546 4.73561 18.0867 4.85706 18.6766 5.09841C19.2665 5.33975 19.8024 5.69617 20.2531 6.14685C20.7038 6.59754 21.0602 7.13347 21.3015 7.72337C21.5429 8.31327 21.6643 8.94533 21.6588 9.58268C21.6533 10.22 21.5209 10.8499 21.2693 11.4355C21.0177 12.0211 20.6521 12.5508 20.1936 12.9935L12 21.1883L3.80641 12.9935C2.90655 12.0934 2.40103 10.8727 2.40103 9.59995C2.40103 8.32716 2.90655 7.10648 3.80641 6.20635V6.20635Z" stroke="#0A0A0A" stroke-linejoin="round"/>
+        </svg>
 
-        {%- if s.button_text != blank -%}
-          <button
-            class='{{- s.button_style -}}'
-            href='{{- s.button_url -}}'
-          >
-            {{- s.button_text -}}
-          </button>
-        {%- endif -%}
+        <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path d="M3.23773 19.5C4.56314 17.2892 7.46801 15.7762 12 15.7762C16.532 15.7762 19.4369 17.2892 20.7623 19.5M15.6 8.1C15.6 10.0882 13.9882 11.7 12 11.7C10.0118 11.7 8.40001 10.0882 8.40001 8.1C8.40001 6.11177 10.0118 4.5 12 4.5C13.9882 4.5 15.6 6.11177 15.6 8.1Z" stroke="#0A0A0A" stroke-linecap="round"/>
+        </svg>
+
+        <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path d="M15.6 8.40005V5.40005C15.6 3.41182 13.9882 1.80005 12 1.80005C10.0118 1.80005 8.39999 3.41182 8.39999 5.40005V8.40005M4.72727 22.2H19.2727C20.558 22.2 21.6 21.1775 21.6 19.916L20.1091 7.80002C20.1091 6.53859 19.0671 5.516 17.7818 5.516H5.92727C4.64195 5.516 3.59999 6.53859 3.59999 7.80002L2.39999 19.916C2.39999 21.1775 3.44195 22.2 4.72727 22.2Z" stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </div>
   </header>
@@ -86,7 +78,7 @@
   "settings": [
     {
       "type": "link_list",
-      "id": "menu_left",
+      "id": "menu",
       "label": "Left Menu"
     },
     {
@@ -95,43 +87,8 @@
       "label": "Logo"
     },
     {
-      "type": "link_list",
-      "id": "menu_right",
-      "label": "Right Menu"
-    },
-    {
       "type": "header",
       "content": "Button"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "button_text",
-      "label": "Button Text"
-    },
-    {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button URL"
-    },
-    {
-      "type": "select",
-      "id": "button_style",
-      "label": "Button Style",
-      "default": "button-primary",
-      "options": [
-        {
-          "value": "button-primary",
-          "label": "Primary"
-        },
-        {
-          "value": "button-white",
-          "label": "White"
-        },
-        {
-          "value": "button-accent",
-          "label": "Accent"
-        }
-      ]
     }
   ],
   "presets": [
