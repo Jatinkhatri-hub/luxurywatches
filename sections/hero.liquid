@@ -4,7 +4,7 @@
 
 <div class='container-full relative overflow-hidden rounded'>
   {%- if s.image -%}
-    {%- render 'component.image', image: s.image -%}
+    {%- render 'component.image', image: s.image, lazyload: false -%}
   {%- endif -%}
 
   <div class='absolute bottom-10 left-1/2 max-w-3xl -translate-x-1/2 py-10 text-center text-white'>
