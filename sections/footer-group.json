@@ -8,9 +8,9 @@
         "footer_logo": "shopify:\/\/shop_images\/logo.svg",
         "footer_content": "<p>© 2023 Alandium, All rights reserved<\/p>",
         "shop": "footer",
-        "information": "",
-        "about": "",
-        "follow": "",
+        "information": "information",
+        "about": "about-us",
+        "follow": "follow-us",
         "newsletter_heading": "",
         "copyright": "",
         "title_tag": "h3"
