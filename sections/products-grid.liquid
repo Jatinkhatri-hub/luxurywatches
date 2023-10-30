@@ -2,12 +2,12 @@
   assign s = section.settings
 -%}
 
-<div class='container-full'>
-  <{{ s.title_tag }} class='mb-10 text-center text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
+<div class='container-full grid-desktop'>
+  <{{ s.title_tag }} class='col-span-full mb-10 text-center text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
 
-  <div class='grid-desktop gap-5'>
+  <div class='grid-desktop col-span-full gap-5'>
     {%- for product in s.products -%}
-      <div class='bg-grey relative col-span-4 rounded'>
+      <div class='bg-grey relative col-span-4 flex flex-col rounded'>
         <a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
         {%- render 'component.image', image: product.featured_image, class: 'mix-blend-multiply' -%}
 
