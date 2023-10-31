@@ -3,9 +3,9 @@
 -%}
 
 <footer class='container-full'>
-  <div class='bg-grey grid-desktop overflow-hidden rounded px-5 pb-8 pt-16 text-primary'>
+  <div class='grid-desktop space-y-6 overflow-hidden rounded bg-grey px-5 py-6 text-primary lg:pb-8 lg:pt-16'>
     {%- if s.footer_logo != blank or s.footer_content != blank -%}
-      <div class='col-span-5 max-w-sm'>
+      <div class='col-span-full max-w-sm lg:col-span-5'>
         <a href='/' class='mb-5 block max-w-[13rem]'>
           {%- render 'component.image', image: s.footer_logo -%}
         </a>
@@ -16,7 +16,7 @@
     {%- endif -%}
 
     {%- if s.shop != blank -%}
-      <div class='col-span-3'>
+      <div class='col-span-full lg:col-span-3'>
         <{{ s.title_tag }} class='mb-5 text-heading-5 uppercase'>
           {{- linklists[s.shop].title -}}
         </{{ s.title_tag }}>
@@ -32,7 +32,7 @@
     {%- endif -%}
 
     {%- if s.information != blank -%}
-      <div class='col-span-3'>
+      <div class='col-span-full lg:col-span-3'>
         <{{ s.title_tag }} class='mb-5 text-heading-5 uppercase'>
           {{- linklists[s.information].title -}}
         </{{ s.title_tag }}>
@@ -48,7 +48,7 @@
     {%- endif -%}
 
     {%- if s.about != blank -%}
-      <div class='col-span-3'>
+      <div class='col-span-full lg:col-span-3'>
         <{{ s.title_tag }} class='mb-5 text-heading-5 uppercase'>
           {{- linklists[s.about].title -}}
         </{{ s.title_tag }}>
@@ -64,7 +64,7 @@
     {%- endif -%}
 
     {%- if s.follow != blank -%}
-      <div class='col-span-3'>
+      <div class='col-span-full lg:col-span-3'>
         <{{ s.title_tag }} class='mb-5 text-heading-5 uppercase'>
           {{- linklists[s.follow].title -}}
         </{{ s.title_tag }}>
@@ -79,7 +79,7 @@
       </div>
     {%- endif -%}
 
-    <div class='col-span-3'>
+    <div class='col-span-full lg:col-span-3'>
       <{{ s.title_tag }} class='mb-5 text-heading-5 uppercase'> HERE TO HELP </{{ s.title_tag }}>
 
       <ul class='space-y-2'>
