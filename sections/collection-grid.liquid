@@ -2,13 +2,13 @@
   assign s = section.settings
 -%}
 
-<div class='container-full grid-desktop gap-5 text-white'>
+<div class='container-full grid-desktop gap-2 text-white lg:gap-5'>
   {%- for block in section.blocks -%}
     {%- liquid
       assign b = block.settings
     -%}
 
-    <div class='relative col-span-5 overflow-hidden rounded'>
+    <div class='relative col-span-full overflow-hidden rounded lg:col-span-5'>
       {%- render 'component.image', image: b.image, lazyload: false -%}
 
       <div class='absolute top-6 w-full text-center text-body-sm'>
