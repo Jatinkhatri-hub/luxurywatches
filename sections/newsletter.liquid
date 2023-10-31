@@ -4,12 +4,12 @@
 
 <div class='container-full'>
   <div class='relative overflow-hidden rounded bg-primary py-20'>
-    <div class='bg-gradient-primary absolute inset-0 h-full w-full'></div>
+    <div class='absolute inset-0 h-full w-full bg-gradient-primary'></div>
 
-    <div class='mx-auto max-w-xl text-center text-white'>
-      <{{ s.title_tag }} class='mb-2 text-heading-3'>{{ s.title }}</{{ s.title_tag }}>
+    <div class='mx-auto max-w-xl px-4 text-center text-white'>
+      <{{ s.title_tag }} class='mb-2 text-heading-4 lg:text-heading-3'>{{ s.title }}</{{ s.title_tag }}>
 
-      <div class='mb-10 text-center text-body-sm text-white opacity-70'>
+      <div class='text-body-xs mb-10 text-center text-white opacity-70 lg:text-body-sm'>
         {{- s.body -}}
       </div>
 
