@@ -192,8 +192,8 @@
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-6",
-        "whitespace_tablet": "md:h-6",
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
         "whitespace_desktop": "lg:h-20"
       }
     },
@@ -208,8 +208,8 @@
     "9fddbb3e-624f-4d60-9adf-44d4bfc293d8": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-6",
-        "whitespace_tablet": "md:h-6",
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
         "whitespace_desktop": "lg:h-20"
       }
     }
