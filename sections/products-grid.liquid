@@ -5,13 +5,13 @@
 <div class='container-full grid-desktop'>
   <{{ s.title_tag }} class='col-span-full mb-10 text-center text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
 
-  <div class='grid-desktop col-span-full gap-5'>
+  <div class='grid-desktop col-span-full gap-2 lg:gap-5'>
     {%- for product in s.products -%}
-      <div class='bg-grey relative col-span-4 flex flex-col rounded'>
+      <div class='relative col-span-10 flex flex-col rounded bg-grey lg:col-span-4'>
         <a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
         {%- render 'component.image', image: product.featured_image, class: 'mix-blend-multiply' -%}
 
-        <div class='bg-grey p-5 text-body'>
+        <div class='text-body-xs bg-grey p-3 lg:p-5 lg:text-body'>
           <h3 class='mb-2 font-body text-primary'>{{- product.title -}}</h3>
           <p class='text-secondary'>{{- product.price | money -}}</p>
         </div>
