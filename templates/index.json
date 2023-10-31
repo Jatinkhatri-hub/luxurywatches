@@ -15,9 +15,9 @@
     "cfcb9c51-80f6-4833-979c-bd069e6acf8b": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "1654caff-7930-4042-b1c0-e5759c74295a": {
@@ -81,9 +81,9 @@
     "76eb96b5-e646-4dd4-bf0b-ed6eb906b11b": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "60e27fb3-110a-477e-8f2a-b0a56d96cabd": {
@@ -103,9 +103,9 @@
     "99903a2d-0264-4209-8032-e39f8784ebc9": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "9d7977e3-7040-4b68-b81e-1bd26888fe60": {
@@ -123,9 +123,9 @@
     "b9ce6a44-7431-47c3-88a6-bf35f590d9ee": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "e37cad80-2371-4c4d-9f2c-0c0427bc1bb0": {
@@ -147,8 +147,8 @@
       "type": "whitespace",
       "settings": {
         "whitespace_mobile": "h-6",
-        "whitespace_tablet": "h-6",
-        "whitespace_desktop": "h-6"
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "a10553a1-13d9-4c44-8a28-456fb6c1ba5e": {
@@ -170,8 +170,8 @@
       "type": "whitespace",
       "settings": {
         "whitespace_mobile": "h-6",
-        "whitespace_tablet": "h-6",
-        "whitespace_desktop": "h-6"
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "21ba022b-8871-4a85-90db-c9ffa0f22710": {
@@ -192,9 +192,9 @@
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     },
     "6ccb25f7-4702-485d-a9e6-ec531cc86368": {
@@ -208,9 +208,9 @@
     "9fddbb3e-624f-4d60-9adf-44d4bfc293d8": {
       "type": "whitespace",
       "settings": {
-        "whitespace_mobile": "h-10",
-        "whitespace_tablet": "h-10",
-        "whitespace_desktop": "h-20"
+        "whitespace_mobile": "h-6",
+        "whitespace_tablet": "md:h-6",
+        "whitespace_desktop": "lg:h-20"
       }
     }
   },
