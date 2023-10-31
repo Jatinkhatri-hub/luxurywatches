@@ -4,14 +4,18 @@
 
 <div class='container-full relative overflow-hidden rounded'>
   {%- if s.image -%}
-    {%- render 'component.image', image: s.image, lazyload: false -%}
+    {%- render 'component.image',
+      image: s.image,
+      lazyload: false,
+      class: 'min-h-[450px] lg:min-h-auto rounded overflow-hidden'
+    -%}
   {%- endif -%}
 
-  <div class='absolute bottom-10 left-1/2 max-w-3xl -translate-x-1/2 py-10 text-center text-white'>
+  <div class='absolute bottom-0 left-1/2 w-full max-w-3xl -translate-x-1/2 px-10 py-10 text-center text-white lg:bottom-10 lg:px-0'>
     {%- if s.title != blank -%}
-      <{{ s.title_tag }} class='text-heading-1'>{{ s.title }}</{{ s.title_tag }}>
+      <{{ s.title_tag }} class='text-heading-4 lg:text-heading-1'>{{ s.title }}</{{ s.title_tag }}>
 
-      <div class='mx-auto mb-6 max-w-[40rem] text-body'>
+      <div class='text-body-xs mx-auto mb-6 mt-2 max-w-[40rem] lg:mt-0 lg:text-body'>
         {{- s.body -}}
       </div>
 
