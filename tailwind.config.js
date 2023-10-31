@@ -49,6 +49,12 @@ module.exports = {
             lineHeight: '120%',
           },
         ],
+        'body-xs': [
+          '14px',
+          {
+            lineHeight: '120%',
+          },
+        ],
         body: [
           '20px',
           {
