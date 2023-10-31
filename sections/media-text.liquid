@@ -6,15 +6,15 @@
   class='container-full overflow-hidden rounded'
 >
   <div class='grid-desktop' style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'>
-    <div class='col-span-10 {% if s.image_alignment == 'right'%}col-start-11 row-start-1{% endif %}'>
+    <div class='col-span-full row-start-1 lg:col-span-10 {% if s.image_alignment == 'right' %}lg:col-start-11 lg:row-start-1{% endif %}'>
       {%- render 'component.image', image: s.image -%}
     </div>
 
-    <div class='col-span-10 {% if s.image_alignment == 'right'%}col-start-1 row-start-1{% endif %}'>
+    <div class='col-span-full row-start-2 lg:col-span-10 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'>
       <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center p-5 text-center'>
-        <{{ s.title_tag }} class='mb-2 text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
+        <{{ s.title_tag }} class='mb-4 text-heading-5 lg:text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
 
-        <div class='mb-6 text-body-sm opacity-60'>{{- s.body -}}</div>
+        <div class='text-body-xs mb-6 opacity-60 lg:text-body-sm'>{{- s.body -}}</div>
 
         <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
           {{- s.button_text -}}
