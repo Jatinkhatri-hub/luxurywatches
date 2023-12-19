@@ -1,0 +1,116 @@
+{% liquid
+  assign s = section.settings
+%}
+
+<div class='relative grid w-full grid-cols-12 overflow-hidden lg:h-screen'>
+  <div class='col-span-full lg:hidden'>
+    {%- render 'component.image', image: s.background_image_mobile -%}
+  </div>
+
+  <div class='col-span-full hidden lg:block'>
+    {%- render 'component.image', image: s.background_image -%}
+  </div>
+
+  <div class='absolute left-1/2 top-10 z-10 h-16 w-16 -translate-x-1/2 lg:h-24 lg:w-24'>
+    {%- render 'component.image', image: s.logo -%}
+  </div>
+
+  <div class='absolute left-1/2 top-1/3 col-span-full w-full -translate-x-1/2 -translate-y-1/2 px-5 text-center text-white lg:top-1/2 lg:col-span-5 lg:col-start-3'>
+    <{{ s.title_tag }} class='text-[10vw] font-bold leading-none lg:text-[4.5vw]'>
+      {{- s.title -}}
+    </{{ s.title_tag }}>
+
+    <div class='mx-auto mt-2 max-w-[550px] text-center text-[18px] leading-[22px] opacity-60 lg:mt-5 lg:text-[20px] lg:leading-[24px]'>
+      {{- s.body -}}
+    </div>
+
+    {%- render 'newsletter-form' -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coming Soon",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_mobile",
+      "label": "Logo Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coming Soon"
+    }
+  ]
+}
+{% endschema %}

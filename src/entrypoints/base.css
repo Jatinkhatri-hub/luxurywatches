@@ -4,8 +4,8 @@
 
 @layer base {
   @font-face {
-    font-family: 'bebas';
-    src: url('../../fonts/bebas.woff2') format('woff2');
+    font-family: 'orbitron';
+    src: url('../../fonts/orbitron.woff2') format('woff2');
   }
 
   html {

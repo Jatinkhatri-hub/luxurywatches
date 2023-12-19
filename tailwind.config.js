@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['bebas', 'sans-serif'],
+        heading: ['orbitron', 'sans-serif'],
         body: 'var(--font-body-family)',
       },
       fontSize: {

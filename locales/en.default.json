@@ -68,7 +68,7 @@
     "submit": "Sign up",
     "confirmation": "Thanks for subscribing",
     "submit_error": "Email address is invalid.",
-    "email_placeholder": "Your email",
+    "email_placeholder": "your@email.com",
     "email_label": "Sign up and save on your first Booking"
   }
 }

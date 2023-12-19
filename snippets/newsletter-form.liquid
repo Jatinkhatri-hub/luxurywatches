@@ -1,15 +1,13 @@
-{% form 'customer', class: '' %}
+{% form 'customer', class: 'max-w-[470px] mx-auto mt-4 lg:mt-10' %}
   <input type='hidden' name='contact[tags]' value='newsletter'>
-  <div
-    class=''
-  >
-    <div>
-      <div class='relative flex'>
+  <div>
+    <div class='relative flex flex-col lg:flex-row'>
+      <div class='relative w-full'>
         <input
           id='newsletter'
           type='email'
           name='contact[email]'
-          class='w-full rounded-bl rounded-tl bg-primary bg-opacity-30 p-5 text-body-sm outline-none'
+          class='w-full rounded-bl rounded-tl border border-[#404040] bg-primary	 bg-opacity-50 p-4 text-body-sm outline-none backdrop-blur-sm lg:p-5'
           value='{{ form.email }}'
           aria-required='true'
           autocorrect='off'
@@ -25,15 +23,17 @@
           placeholder='{{- 'newsletter.email_placeholder' | t -}}'
           required
         >
-        <button
-          type='submit'
-          class='shrink-0 rounded-bl-none rounded-tl-none border-none bg-accent px-6 text-button uppercase text-primary lg:px-10'
-          name='commit'
-          aria-label='subscribe'
-        >
-          {{- 'newsletter.submit' | t -}}
-        </button>
+
+        {%- render 'icon', icon: 'message', class: 'absolute right-4 top-1/2 -translate-y-1/2' -%}
       </div>
+      <button
+        type='submit'
+        class='mt-4 shrink-0 border-none bg-accent px-6 py-5 font-heading font-black uppercase text-primary lg:mt-0 lg:rounded-bl-none lg:rounded-tl-none lg:px-10 lg:py-0'
+        name='commit'
+        aria-label='subscribe'
+      >
+        {{- 'newsletter.submit' | t -}}
+      </button>
     </div>
     {%- if form.errors -%}
       <small class='' id='newsletter-error'>
