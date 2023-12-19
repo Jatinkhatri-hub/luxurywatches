@@ -4,6 +4,7 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "footer_logo": "shopify:\/\/shop_images\/logo.svg",
         "footer_content": "<p>© 2023 Alandium, All rights reserved<\/p>",

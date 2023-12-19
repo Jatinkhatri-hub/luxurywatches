@@ -4,6 +4,7 @@
   "sections": {
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "menu": "header",
         "logo": "shopify:\/\/shop_images\/logo.svg"
