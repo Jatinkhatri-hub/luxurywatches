@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "hero",
+      "disabled": true,
       "settings": {
         "title": "Gladiator collection",
         "title_tag": "h1",
@@ -14,6 +15,7 @@
     },
     "cfcb9c51-80f6-4833-979c-bd069e6acf8b": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -74,12 +76,14 @@
         "409f0b96-4d41-4285-aec3-a2c37cd49899",
         "265f7b0e-5a10-4bb4-a5c0-eb22fb12598e"
       ],
+      "disabled": true,
       "settings": {
         "title_tag": "h2"
       }
     },
     "76eb96b5-e646-4dd4-bf0b-ed6eb906b11b": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -88,6 +92,7 @@
     },
     "60e27fb3-110a-477e-8f2a-b0a56d96cabd": {
       "type": "products-grid",
+      "disabled": true,
       "settings": {
         "title": "OUR BEST SELLERS",
         "title_tag": "h2",
@@ -102,6 +107,7 @@
     },
     "99903a2d-0264-4209-8032-e39f8784ebc9": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -110,6 +116,7 @@
     },
     "9d7977e3-7040-4b68-b81e-1bd26888fe60": {
       "type": "banner",
+      "disabled": true,
       "settings": {
         "title": "How we make our watches",
         "title_tag": "h2",
@@ -122,6 +129,7 @@
     },
     "b9ce6a44-7431-47c3-88a6-bf35f590d9ee": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -130,6 +138,7 @@
     },
     "e37cad80-2371-4c4d-9f2c-0c0427bc1bb0": {
       "type": "media-text",
+      "disabled": true,
       "settings": {
         "title": "Join A community of over 10,000 members",
         "title_tag": "h2",
@@ -145,6 +154,7 @@
     },
     "198bc1e7-4444-4302-b1dd-a22639fdf34e": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -153,6 +163,7 @@
     },
     "a10553a1-13d9-4c44-8a28-456fb6c1ba5e": {
       "type": "media-text",
+      "disabled": true,
       "settings": {
         "title": "Join A community of over 10,000 members",
         "title_tag": "h2",
@@ -168,6 +179,7 @@
     },
     "71f9f276-272c-4148-8a12-06936487bceb": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -176,6 +188,7 @@
     },
     "21ba022b-8871-4a85-90db-c9ffa0f22710": {
       "type": "media-text",
+      "disabled": true,
       "settings": {
         "title": "Join A community of over 10,000 members",
         "title_tag": "h2",
@@ -191,6 +204,7 @@
     },
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
@@ -199,6 +213,7 @@
     },
     "6ccb25f7-4702-485d-a9e6-ec531cc86368": {
       "type": "newsletter",
+      "disabled": true,
       "settings": {
         "title": "Subscribe to the latest news",
         "title_tag": "h2",
@@ -207,10 +222,23 @@
     },
     "9fddbb3e-624f-4d60-9adf-44d4bfc293d8": {
       "type": "whitespace",
+      "disabled": true,
       "settings": {
         "whitespace_mobile": "h-10",
         "whitespace_tablet": "md:h-10",
         "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "c73228f4-8253-47c9-8021-04a22a5cce8b": {
+      "type": "coming-soon",
+      "settings": {
+        "title": "COMING SOON",
+        "title_tag": "h2",
+        "body": "<p>Leave us your e-mail so we will come back to you when everything is ready.<\/p>",
+        "logo": "shopify:\/\/shop_images\/nav_logo_37ed72ca-a387-484d-85e1-de6ae66b5311.svg",
+        "logo_mobile": "shopify:\/\/shop_images\/nav_logo_37ed72ca-a387-484d-85e1-de6ae66b5311.svg",
+        "background_image": "shopify:\/\/shop_images\/COMING_SOON.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/COMING_SOON_1.png"
       }
     }
   },
@@ -230,6 +258,7 @@
     "21ba022b-8871-4a85-90db-c9ffa0f22710",
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02",
     "6ccb25f7-4702-485d-a9e6-ec531cc86368",
-    "9fddbb3e-624f-4d60-9adf-44d4bfc293d8"
+    "9fddbb3e-624f-4d60-9adf-44d4bfc293d8",
+    "c73228f4-8253-47c9-8021-04a22a5cce8b"
   ]
 }
