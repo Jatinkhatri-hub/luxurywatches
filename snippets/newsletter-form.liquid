@@ -36,11 +36,13 @@
       </button>
     </div>
     {%- if form.errors -%}
-      <small class='' id='newsletter-error'>
-        {%- render 'icon', icon: 'icon-error' -%}
-        {{- form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email -}}
-      </small>
+      <div class='mt-4 flex w-full' id='newsletter-error'>
+        {%- render 'icon', icon: 'icon-error', class: 'w-4 mr-2' -%}
+        <div>
+          {{- form.errors.translated_fields.email | capitalize }}
+          {{ form.errors.messages.email -}}
+        </div>
+      </div>
     {%- endif -%}
   </div>
   {%- if form.posted_successfully? -%}
