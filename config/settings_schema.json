@@ -155,44 +155,5 @@
         "default": true
       }
     ]
-  },
-  {
-    "name": "Payment icons",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Payment icons"
-      },
-      {
-        "type": "checkbox",
-        "id": "amex_enabled",
-        "label": "Amex",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "diner_enabled",
-        "label": "Diner intern",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "discover_enabled",
-        "label": "Discover",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "mastercard_enabled",
-        "label": "Mastercard",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "visa_enabled",
-        "label": "Visa",
-        "default": true
-      }
-    ]
   }
 ]

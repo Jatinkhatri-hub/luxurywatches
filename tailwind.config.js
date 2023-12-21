@@ -19,13 +19,13 @@ module.exports = {
           },
         ],
         'heading-2': [
-          '80px',
+          '70px',
           {
             lineHeight: '100%',
           },
         ],
         'heading-3': [
-          '60px',
+          '50px',
           {
             lineHeight: '100%',
           },
@@ -44,41 +44,29 @@ module.exports = {
           },
         ],
         'body-sm': [
-          '18px',
-          {
-            lineHeight: '120%',
-          },
-        ],
-        'body-xs': [
-          '14px',
-          {
-            lineHeight: '120%',
-          },
-        ],
-        body: [
           '20px',
           {
             lineHeight: '120%',
+            letterSpacing: '-2%',
           },
         ],
-        'menu-sm': [
-          '14px',
+        'body-xs': [
+          '18',
           {
-            lineHeight: '100%',
-            fontWeight: '500',
+            lineHeight: '110%',
           },
         ],
         menu: [
           '12px',
           {
-            lineHeight: '18px',
+            lineHeight: '4%',
           },
         ],
         button: [
           '12px',
           {
             lineHeight: '100%',
-            letterSpacing: '0.96px',
+            letterSpacing: '8%',
           },
         ],
       },
@@ -86,10 +74,6 @@ module.exports = {
         accent: 'hsla(var(--color-accent) / <alpha-value>)',
         primary: 'hsla(var(--color-primary) / <alpha-value>)',
         secondary: 'hsla(var(--color-secondary) / <alpha-value>)',
-        grey: '#F2F2F2',
-      },
-      gridTemplateColumns: {
-        20: 'repeat(20, minmax(0, 1fr))',
       },
       backgroundImage: {
         'gradient-primary':

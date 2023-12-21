@@ -35,8 +35,12 @@
     @apply mx-auto w-full px-5;
   }
 
+  .animation-appearance {
+    @apply transition-all duration-300;
+  }
+
   .grid-desktop {
-    @apply grid grid-cols-20;
+    @apply grid grid-cols-12;
   }
 
   .button,
@@ -48,17 +52,7 @@
     @apply relative cursor-pointer transition-all duration-300 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-accent hover:after:w-full;
   }
 
-  .button-primary {
-  }
-
-  .button-white {
-  }
-
   .button-accent {
-    @apply animation-appereance border-accent bg-accent uppercase text-primary  hover:bg-transparent hover:text-accent;
-  }
-
-  .animation-appereance {
-    @apply transition-all duration-300;
+    @apply animation-appearance border-accent bg-accent uppercase text-primary  hover:bg-transparent hover:text-accent;
   }
 }
