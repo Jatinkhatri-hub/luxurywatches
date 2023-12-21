@@ -19,7 +19,7 @@
         {% for link in linklists[s.menu].links -%}
           <li class='{%- if link.links != blank -%}flex items-center group relative h-full{%- endif -%}'>
             <a
-              class='animated-link flex items-center space-x-1.5'
+              class='animated-link flex items-center space-x-1.5 leading-normal'
               href='{{- link.url -}}'
             >
               <span>
@@ -38,10 +38,10 @@
             </a>
 
             {%- if link.links != blank -%}
-              <ul class='animation-appereance bg-theme pointer-events-none absolute -left-[15%] top-8 w-[130%] space-y-4 rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100'>
+              <ul class='animation-appereance bg-theme pointer-events-none absolute -left-[15%] top-5 w-[130%] space-y-2.5 rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100'>
                 {%- for child_link in link.links -%}
                   <li>
-                    <a class='animated-link text-[12px]' href='{{- child_link.url -}}'>
+                    <a class='animated-link text-menu leading-normal' href='{{- child_link.url -}}'>
                       {{- child_link.title -}}
                     </a>
                   </li>
