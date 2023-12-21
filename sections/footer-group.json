@@ -5,7 +5,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "footer_logo": "shopify:\/\/shop_images\/logo.svg",
+        "footer_logo": "shopify:\/\/shop_images\/LOGO_26d6f1ac-0798-4cd7-80cc-d9a5a4f9c8cb.svg",
         "footer_content": "<p>© 2023 Alandium, All rights reserved<\/p>",
         "shop": "footer",
         "information": "information",
@@ -13,7 +13,8 @@
         "follow": "follow-us",
         "newsletter_heading": "",
         "copyright": "",
-        "title_tag": "h3"
+        "title_tag": "h3",
+        "payment_methods_img": "shopify:\/\/shop_images\/div.payment-methods_efc8708f-0b41-4bb1-bc6d-385098cf28f1.svg"
       }
     }
   },

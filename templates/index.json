@@ -132,15 +132,13 @@
     "e37cad80-2371-4c4d-9f2c-0c0427bc1bb0": {
       "type": "media-text",
       "settings": {
-        "title": "Join A community of over 10,000 members",
+        "title": "Pure Titanium Sunglasses",
         "title_tag": "h2",
-        "body": "<p>Join the Alandium Club. You can make new friends, share ideas for new projects, and interact directly with our team. We're waiting for you!<\/p>",
+        "body": "<p>Titanium frames with unrivaled durability and comfort. Optics polished for unmatched clarity. Join our community of those who settle for no less than the very best performance.<\/p>",
         "button_text": "Learn more",
         "button_url": "#",
         "button_style": "button-accent",
-        "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#f2f2f2",
-        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/Image_Wrap_6a5f9aba-73d4-46a5-92c2-e8675f08f1f7.png",
         "image_alignment": "left"
       }
     },
@@ -155,15 +153,13 @@
     "a10553a1-13d9-4c44-8a28-456fb6c1ba5e": {
       "type": "media-text",
       "settings": {
-        "title": "Join A community of over 10,000 members",
+        "title": "Read our story",
         "title_tag": "h2",
         "body": "<p>Join the Alandium Club. You can make new friends, share ideas for new projects, and interact directly with our team. We're waiting for you!<\/p>",
         "button_text": "Learn more",
         "button_url": "#",
         "button_style": "button-accent",
-        "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#f2f2f2",
-        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/Image_Wrap_6a5f9aba-73d4-46a5-92c2-e8675f08f1f7.png",
         "image_alignment": "right"
       }
     },
@@ -184,9 +180,7 @@
         "button_text": "Learn more",
         "button_url": "#",
         "button_style": "button-accent",
-        "image": "shopify:\/\/shop_images\/Image_Wrap.png",
-        "background_color": "#f2f2f2",
-        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/Image_Wrap_0705fe33-0786-438e-b1f3-5947af639368.png",
         "image_alignment": "left"
       }
     },
