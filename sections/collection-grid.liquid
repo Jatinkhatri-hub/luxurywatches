@@ -8,15 +8,15 @@
       assign b = block.settings
     -%}
 
-    <div class='relative col-span-full overflow-hidden rounded lg:col-span-5'>
+    <div class='relative col-span-full overflow-hidden rounded lg:col-span-3'>
       {%- render 'component.image', image: b.image, lazyload: false -%}
 
-      <div class='absolute top-6 w-full text-center text-body-sm'>
+      <div class='absolute top-6 w-full text-center text-body-xs'>
         {{- b.subtitle -}}
       </div>
 
       <div class='absolute bottom-8 w-full'>
-        <{{ s.title_tag }} class='mb-4 text-center text-heading-5'>
+        <{{ s.title_tag }} class='text-label-1 mb-4 text-center font-bold uppercase'>
           {{- b.title -}}
         </{{ s.title_tag }}>
 

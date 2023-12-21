@@ -74,10 +74,16 @@ module.exports = {
         accent: 'hsla(var(--color-accent) / <alpha-value>)',
         primary: 'hsla(var(--color-primary) / <alpha-value>)',
         secondary: 'hsla(var(--color-secondary) / <alpha-value>)',
+        theme: 'hsla(var(--color-theme) / <alpha-value>)',
+        content: 'hsla(var(--color-text) / <alpha-value>)',
       },
       backgroundImage: {
         'gradient-primary':
           'linear-gradient(0deg, rgba(25, 225, 252, 0.30) 3.07%, rgba(1, 1, 1, 0.00) 73.13%)',
+        'gradient-heading':
+          'radial-gradient(50% 50% at 50% 50%, rgba(72, 250, 249, 0.13) 0%, rgba(130, 207, 207, 0.00) 100%)',
+        'gradient-strokes':
+          'linear-gradient(90deg, #48faf900, #48FAF9, #48faf900)',
       },
     },
   },

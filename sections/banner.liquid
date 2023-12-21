@@ -3,11 +3,13 @@
 -%}
 
 <div class='container-full grid-desktop relative'>
-  <div class='col-span-full min-h-[500px]'>{%- render 'component.image', image: s.image -%}</div>
+  <div class='col-span-full min-h-[600px]'>{%- render 'component.image', image: s.image -%}</div>
 
-  <div class='absolute left-4 top-1/2 col-span-full max-w-3xl -translate-y-1/2 pr-10 text-left text-white lg:left-10'>
-    <{{ s.title_tag }} class='mb-5 text-heading-3 lg:text-heading-2'>{{- s.title -}}</{{ s.title_tag }}>
-    <div class='mb-10 text-body-sm'>{{- s.body -}}</div>
+  <div class='absolute left-4 top-1/2 col-span-full max-w-4xl -translate-y-1/2 pr-10 text-left text-white lg:left-10'>
+    <{{ s.title_tag }} class='mb-5 text-heading-3 font-bold uppercase lg:text-heading-2'>
+      {{- s.title -}}
+    </{{ s.title_tag }}>
+    <div class='mb-10 max-w-2xl text-body-xs'>{{- s.body -}}</div>
 
     <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
       {{- s.button_text -}}

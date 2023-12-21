@@ -26,7 +26,7 @@
   }
 
   body {
-    @apply font-body text-black;
+    @apply text-content bg-theme font-body;
   }
 }
 
@@ -53,6 +53,10 @@
   }
 
   .button-accent {
-    @apply animation-appearance border-accent bg-accent uppercase text-primary  hover:bg-transparent hover:text-accent;
+    @apply animation-appearance border-accent bg-accent font-heading font-black uppercase text-primary hover:bg-transparent hover:text-accent;
+  }
+
+  .gradient-heading {
+    @apply text-content bg-gradient-heading before:bg-gradient-strokes after:bg-gradient-strokes relative col-span-full mb-14 py-8 text-center before:absolute before:left-0 before:top-0 before:h-0.5 before:w-full before:content-[""] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:content-[""];
   }
 }
