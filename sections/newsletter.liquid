@@ -3,13 +3,15 @@
 -%}
 
 <div class='container-full'>
-  <div class='relative overflow-hidden rounded bg-primary py-20'>
+  <div class='relative overflow-hidden rounded bg-[#1D1E1E] py-20'>
     <div class='absolute inset-0 h-full w-full bg-gradient-primary'></div>
 
-    <div class='mx-auto max-w-xl px-4 text-center text-white'>
-      <{{ s.title_tag }} class='mb-2 text-heading-4 lg:text-heading-3'>{{ s.title }}</{{ s.title_tag }}>
+    <div class='mx-auto max-w-full px-4 text-center text-white'>
+      <{{ s.title_tag }} class='mb-2 text-heading-4 font-bold uppercase lg:text-heading-3'>
+        {{- s.title -}}
+      </{{ s.title_tag }}>
 
-      <div class='text-body-xs mb-10 text-center text-white opacity-70 lg:text-body-sm'>
+      <div class='mx-auto mb-10 max-w-xl text-center text-body-xs text-white opacity-70 lg:text-body-sm'>
         {{- s.body -}}
       </div>
 

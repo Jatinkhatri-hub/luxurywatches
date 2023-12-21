@@ -5,14 +5,20 @@
 <div
   class='container-full overflow-hidden rounded'
 >
-  <div class='grid-desktop' style='background-color: {{- s.background_color -}}; color: {{- s.text_color -}}'>
+  <div class='grid-desktop text-content bg-theme'>
     <div class='col-span-full row-start-1 lg:col-span-6 {% if s.image_alignment == 'right' %}lg:col-start-7 lg:row-start-1{% endif %}'>
       {%- render 'component.image', image: s.image -%}
     </div>
 
-    <div class='col-span-full row-start-2 lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'>
+    <div class='col-span-full row-start-2 bg-[#1D1E1E] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'>
       <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center p-5 text-center'>
-        <{{ s.title_tag }} class='mb-4 text-heading-5 lg:text-heading-4'>{{- s.title -}}</{{ s.title_tag }}>
+        {%- if s.bg_image and s.bg_image != blank -%}
+          {%- render 'component.image', image: s.bg_image, class: 'absolute inset-0 w-full h-full' -%}
+        {%- endif -%}
+
+        <{{ s.title_tag }} class='mb-4 text-heading-5 font-semibold uppercase lg:text-heading-4'>
+          {{- s.title -}}
+        </{{ s.title_tag }}>
 
         <div class='mb-6 text-body-xs opacity-60 lg:text-body-sm'>{{- s.body -}}</div>
 
@@ -31,6 +37,11 @@
     {
       "type": "header",
       "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
     },
     {
       "type": "inline_richtext",
@@ -116,18 +127,6 @@
     {
       "type": "header",
       "content": "Appereance"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "#F2F2F2"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#000000"
     },
     {
       "type": "select",

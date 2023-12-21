@@ -12,7 +12,7 @@
   {%- endif -%}
 
   {%- if s.video and s.video != blank -%}
-    {%- render 'video', video: s.video, class: 'rounded overflow-hidden max-h-[700px]', video_class: 'h-full' -%}
+    {%- render 'video', video: s.video, class: 'rounded overflow-hidden max-h-[700px]', video_class: 'h-full w-full' -%}
   {%- endif -%}
 
   <div class='absolute bottom-0 left-1/2 w-full max-w-full -translate-x-1/2 px-10 py-10 text-center text-white lg:bottom-10 lg:px-0'>
