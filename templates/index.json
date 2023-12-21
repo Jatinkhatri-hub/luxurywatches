@@ -1,13 +1,5 @@
 {
   "sections": {
-    "89a59b3c-c13e-44ad-8cd5-324151225195": {
-      "type": "whitespace",
-      "settings": {
-        "whitespace_mobile": "h-6",
-        "whitespace_tablet": "md:h-6",
-        "whitespace_desktop": "lg:h-6"
-      }
-    },
     "hero": {
       "type": "hero",
       "settings": {
@@ -218,7 +210,6 @@
     }
   },
   "order": [
-    "89a59b3c-c13e-44ad-8cd5-324151225195",
     "hero",
     "cfcb9c51-80f6-4833-979c-bd069e6acf8b",
     "1654caff-7930-4042-b1c0-e5759c74295a",
