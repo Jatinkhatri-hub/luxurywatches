@@ -7,9 +7,12 @@
     "text_color": "#fff",
     "type_heading": "dm_sans_n4",
     "type_body": "dm_sans_n4",
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
-    "Default": {}
+    "Default": {
+    }
   }
 }

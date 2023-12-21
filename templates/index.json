@@ -26,9 +26,9 @@
         "98a177d4-321b-45e6-8b95-ba4118aeeca0": {
           "type": "collection-grid",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Category_Card.png",
-            "subtitle": "<p>20 Watches<\/p>",
-            "title": "WOMEN WATCHES",
+            "image": "shopify:\/\/shop_images\/Category_Card_367c2a6b-d592-4f8f-aa43-eb953a05251a.png",
+            "subtitle": "<p>7 Watches<\/p>",
+            "title": "Ceriepon skeletons",
             "button_text": "Shop now",
             "button_url": "#",
             "button_style": "button-accent"
@@ -37,9 +37,9 @@
         "f2c48216-0c4b-4c52-b27b-dded2bda7621": {
           "type": "collection-grid",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Category_Card_1.png",
-            "subtitle": "<p>18 Watches<\/p>",
-            "title": "premium watches",
+            "image": "shopify:\/\/shop_images\/Category_Card_dfc74b26-2860-4437-a2c3-923814039c44.png",
+            "subtitle": "<p>7 Watches<\/p>",
+            "title": "Centurion Big",
             "button_text": "Shop now",
             "button_url": "#",
             "button_style": "button-accent"
@@ -48,9 +48,9 @@
         "409f0b96-4d41-4285-aec3-a2c37cd49899": {
           "type": "collection-grid",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Category_Card_2.png",
-            "subtitle": "<p>18 Watches<\/p>",
-            "title": "racing watches",
+            "image": "shopify:\/\/shop_images\/Category_Card_e5207339-d8aa-42cb-8b3a-34beb822bf06.png",
+            "subtitle": "<p>7 Watches<\/p>",
+            "title": "Racing Watches",
             "button_text": "Shop now",
             "button_url": "#",
             "button_style": "button-accent"
@@ -59,9 +59,9 @@
         "265f7b0e-5a10-4bb4-a5c0-eb22fb12598e": {
           "type": "collection-grid",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Category_Card_3.png",
-            "subtitle": "<p>18 Watches<\/p>",
-            "title": "eyeweAR",
+            "image": "shopify:\/\/shop_images\/Category_Card_c09d5dd5-3148-4ed9-8dab-d175bfdaaec2.png",
+            "subtitle": "<p>18 Glasses<\/p>",
+            "title": "Eyewear",
             "button_text": "Shop now",
             "button_url": "#",
             "button_style": "button-accent"
