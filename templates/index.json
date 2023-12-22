@@ -139,7 +139,9 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap_6a5f9aba-73d4-46a5-92c2-e8675f08f1f7.png",
-        "image_alignment": "left"
+        "video": "shopify:\/\/files\/videos\/production_id_4824611 (2160p)_bf69ba43-2f34-408c-95f2-c9bba178dd6f.mp4",
+        "image_alignment": "left",
+        "enable_background_pattern": true
       }
     },
     "198bc1e7-4444-4302-b1dd-a22639fdf34e": {
@@ -160,7 +162,9 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap_6a5f9aba-73d4-46a5-92c2-e8675f08f1f7.png",
-        "image_alignment": "right"
+        "video": "shopify:\/\/files\/videos\/production_id_4824611 (2160p).mp4",
+        "image_alignment": "right",
+        "enable_background_pattern": true
       }
     },
     "71f9f276-272c-4148-8a12-06936487bceb": {
@@ -181,7 +185,8 @@
         "button_url": "#",
         "button_style": "button-accent",
         "image": "shopify:\/\/shop_images\/Image_Wrap_0705fe33-0786-438e-b1f3-5947af639368.png",
-        "image_alignment": "left"
+        "image_alignment": "left",
+        "enable_background_pattern": true
       }
     },
     "e5b72d81-bbe3-4b95-bd23-0fe714878f02": {
@@ -197,7 +202,8 @@
       "settings": {
         "title": "Subscribe to the latest news",
         "title_tag": "h2",
-        "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>"
+        "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>",
+        "enable_background_pattern": true
       }
     },
     "9fddbb3e-624f-4d60-9adf-44d4bfc293d8": {
