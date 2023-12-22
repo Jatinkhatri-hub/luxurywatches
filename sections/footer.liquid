@@ -3,9 +3,9 @@
 -%}
 
 <footer class='container-full'>
-  <div class='grid-desktop text-content space-y-6 overflow-hidden rounded bg-grey px-5 py-6 lg:space-y-0 lg:pt-16'>
+  <div class='grid-desktop bg-grey gap-4 space-y-6 overflow-hidden rounded py-6 text-content lg:space-y-0 lg:px-5 lg:pt-16'>
     {%- if s.footer_logo != blank or s.footer_content != blank -%}
-      <div class='col-span-full max-w-sm lg:col-span-3'>
+      <div class='col-span-full max-w-sm lg:col-span-2'>
         <a href='/' class='mb-5 block max-w-[13rem]'>
           {%- render 'component.image', image: s.footer_logo -%}
         </a>
@@ -16,7 +16,7 @@
     {%- endif -%}
 
     {%- if s.shop != blank -%}
-      <div class='col-span-full lg:col-span-1'>
+      <div class='col-span-full lg:col-span-2'>
         <{{ s.title_tag }} class='mb-5 text-body-sm font-bold uppercase'>
           {{- linklists[s.shop].title -}}
         </{{ s.title_tag }}>

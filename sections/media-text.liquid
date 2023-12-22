@@ -5,17 +5,24 @@
 <div
   class='container-full overflow-hidden rounded'
 >
-  <div class='grid-desktop text-content bg-theme'>
+  <div class='grid-desktop bg-theme text-content'>
     <div class='col-span-full row-start-1 lg:col-span-6 {% if s.image_alignment == 'right' %}lg:col-start-7 lg:row-start-1{% endif %}'>
-      {%- render 'component.image', image: s.image -%}
+      {% if s.image and s.video == blank %}
+        {%- render 'component.image', image: s.image -%}
+      {% endif %}
+
+      {%- if s.video and s.video != blank -%}
+        {%- render 'video', video: s.video, video_class: 'h-full w-full' -%}
+      {%- endif -%}
     </div>
 
-    <div class='col-span-full row-start-2 bg-[#1D1E1E] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'>
+    <div
+      {% if s.enable_background_pattern %}
+        style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
+      {% endif %}
+      class='col-span-full row-start-2 bg-[rgb(29,30,30)] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'
+    >
       <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center p-5 text-center'>
-        {%- if s.bg_image and s.bg_image != blank -%}
-          {%- render 'component.image', image: s.bg_image, class: 'absolute inset-0 w-full h-full' -%}
-        {%- endif -%}
-
         <{{ s.title_tag }} class='mb-4 text-heading-5 font-semibold uppercase lg:text-heading-4'>
           {{- s.title -}}
         </{{ s.title_tag }}>
@@ -37,11 +44,6 @@
     {
       "type": "header",
       "content": "Content"
-    },
-    {
-      "type": "image_picker",
-      "id": "bg_image",
-      "label": "Background image"
     },
     {
       "type": "inline_richtext",
@@ -125,6 +127,11 @@
       "label": "Image"
     },
     {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
       "type": "header",
       "content": "Appereance"
     },
@@ -143,6 +150,12 @@
           "label": "Right"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_pattern",
+      "label": "Enable background pattern",
+      "default": true
     }
   ],
   "presets": [

@@ -3,7 +3,12 @@
 -%}
 
 <div class='container-full'>
-  <div class='relative overflow-hidden rounded bg-[#1D1E1E] py-20'>
+  <div
+    {% if s.enable_background_pattern %}
+      style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
+    {% endif %}
+    class='relative overflow-hidden rounded bg-[#1D1E1E] py-20'
+  >
     <div class='absolute inset-0 h-full w-full bg-gradient-primary'></div>
 
     <div class='mx-auto max-w-full px-4 text-center text-white'>
@@ -75,6 +80,12 @@
       "type": "richtext",
       "id": "body",
       "label": "Body"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_pattern",
+      "label": "Enable background pattern",
+      "default": true
     }
   ],
   "presets": [
