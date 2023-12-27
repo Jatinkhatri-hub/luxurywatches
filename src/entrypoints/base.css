@@ -57,6 +57,6 @@
   }
 
   .gradient-heading {
-    @apply relative col-span-full mb-14 bg-gradient-heading py-8 text-center text-content before:absolute before:left-0 before:top-0 before:h-0.5 before:w-full before:bg-gradient-strokes before:content-[""] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-gradient-strokes after:content-[""];
+    @apply relative col-span-full mb-4 bg-gradient-heading py-8 text-center text-content before:absolute before:left-0 before:top-0 before:h-0.5 before:w-full before:bg-gradient-strokes before:content-[""] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-gradient-strokes after:content-[""] lg:mb-14;
   }
 }
