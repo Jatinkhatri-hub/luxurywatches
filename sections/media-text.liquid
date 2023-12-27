@@ -6,7 +6,10 @@
   class='container-full overflow-hidden rounded'
 >
   <div class='grid-desktop bg-theme text-content'>
-    <div class='col-span-full row-start-1 lg:col-span-6 {% if s.image_alignment == 'right' %}lg:col-start-7 lg:row-start-1{% endif %}'>
+    <div 
+      data-aos="fade-in"
+      data-aos-duration="1000"
+      class='col-span-full row-start-1 lg:col-span-6 {% if s.image_alignment == 'right' %}lg:col-start-7 lg:row-start-1{% endif %}'>
       {% if s.image and s.video == blank %}
         {%- render 'component.image', image: s.image -%}
       {% endif %}
@@ -20,6 +23,8 @@
       {% if s.enable_background_pattern %}
         style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
       {% endif %}
+      data-aos="fade-in"
+      data-aos-duration="1000"
       class='col-span-full row-start-2 bg-[rgb(29,30,30)] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'
     >
       <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center py-4 px-2 lg:p-5 text-center'>

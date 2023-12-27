@@ -7,8 +7,9 @@
 {% if path == "/src/entrypoints/base.css" or path == "base.css" %}
   {{ 'base-3f2a8531.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% elsif path == "/src/entrypoints/index.js" or path == "index.js" %}
-  <link rel="modulepreload" href="{{ 'index-829c6fec.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
-  <script src="{{ 'index-829c6fec.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  <link rel="modulepreload" href="{{ 'index-e01c2183.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
+  <script src="{{ 'index-e01c2183.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  {{ 'index-73168167.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
   <link rel="modulepreload" href="{{ 'testimonials-2a7a62f4.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
   {{ 'testimonials-816446ca.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% elsif path == "/src/entrypoints/sections/testimonials.js" or path == "sections/testimonials.js" %}

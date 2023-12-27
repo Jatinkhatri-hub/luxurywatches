@@ -2,7 +2,10 @@
   assign s = section.settings
 -%}
 
-<div class='container-full'>
+<div 
+  data-aos="fade-up"
+  data-aos-duration="1000"
+  class='container-full'>
   <div
     {% if s.enable_background_pattern %}
       style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
