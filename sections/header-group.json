@@ -4,6 +4,21 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "ff72090e-6916-4a86-b165-aea8bc66f455": {
+          "type": "menu",
+          "settings": {
+            "match_menu": "watch collections",
+            "collection_list": [
+              "all-watches",
+              "centurion-big"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "ff72090e-6916-4a86-b165-aea8bc66f455"
+      ],
       "settings": {
         "menu": "header",
         "logo": "shopify:\/\/shop_images\/nav_logo_aef06354-0f44-48a2-b0ed-b3a0ff7592a9.svg"
