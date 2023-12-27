@@ -4,8 +4,8 @@
 			class='cursor-pointer'
 			data-toggle-menu
 		>
-			{% render 'icon', icon: 'menu', class: 'pointer-events-none' %}
-			{% render 'icon', icon: 'close', class: 'pointer-events-none hidden' %}
+			{% render 'icon', icon: 'menu', class: 'pointer-events-none group-is-active:hidden' %}
+			{% render 'icon', icon: 'close', class: 'pointer-events-none hidden group-is-active:block' %}
 		</div>
     {% render 'icon', icon: 'search' %}
   </div>
