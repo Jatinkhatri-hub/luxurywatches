@@ -5,14 +5,14 @@
 {% endcomment %}
 {% assign path = adastra | replace: '~/', '../' | replace: '@/', '../' %}
 {% if path == "/src/entrypoints/base.css" or path == "base.css" %}
-  {{ 'base-10305f27.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
+  {{ 'base-7103a438.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% elsif path == "/src/entrypoints/index.js" or path == "index.js" %}
-  <link rel="modulepreload" href="{{ 'index-3edf4782.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
-  <script src="{{ 'index-3edf4782.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
-  <link rel="modulepreload" href="{{ 'testimonials-67c00929.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
+  <link rel="modulepreload" href="{{ 'index-829c6fec.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
+  <script src="{{ 'index-829c6fec.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  <link rel="modulepreload" href="{{ 'testimonials-2a7a62f4.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
   {{ 'testimonials-816446ca.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% elsif path == "/src/entrypoints/sections/testimonials.js" or path == "sections/testimonials.js" %}
-  <link rel="modulepreload" href="{{ 'testimonials-67c00929.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
-  <script src="{{ 'testimonials-67c00929.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  <link rel="modulepreload" href="{{ 'testimonials-2a7a62f4.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
+  <script src="{{ 'testimonials-2a7a62f4.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
   {{ 'testimonials-816446ca.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% endif %}

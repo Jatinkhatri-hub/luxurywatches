@@ -31,7 +31,7 @@
   assign img_class = img_class | append: class | append: ' w-full h-full object-cover object-center'
 %}
 
-<picture>
+<picture class='{{ picture_class }}'>
   {% if image != blank %}
     {{
       image

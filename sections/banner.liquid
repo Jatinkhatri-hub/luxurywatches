@@ -5,11 +5,11 @@
 <div class='container-full grid-desktop relative'>
   <div class='col-span-full min-h-[600px]'>{%- render 'component.image', image: s.image -%}</div>
 
-  <div class='absolute left-4 top-1/2 col-span-full max-w-4xl -translate-y-1/2 pr-10 text-left text-white lg:left-10'>
-    <{{ s.title_tag }} class='mb-5 text-heading-5 font-bold uppercase lg:text-heading-2'>
+  <div class='absolute left-4 bottom-8 lg:top-1/2 col-span-full max-w-4xl lg:-translate-y-1/2 pr-10 text-left text-white lg:left-10'>
+    <{{ s.title_tag }} class='mb-5 text-heading-2-mobile font-bold uppercase lg:text-heading-2'>
       {{- s.title -}}
     </{{ s.title_tag }}>
-    <div class='mb-10 max-w-2xl text-body-xs'>{{- s.body -}}</div>
+    <div class='mb-4 lg:mb-10 max-w-2xl text-body-mobile lg:text-body-xs'>{{- s.body -}}</div>
 
     <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
       {{- s.button_text -}}

@@ -2,31 +2,33 @@
   assign s = section.settings
 -%}
 
-<div class='container-full grid-desktop gap-2 text-white lg:gap-5'>
-  {%- for block in section.blocks -%}
-    {%- liquid
-      assign b = block.settings
-    -%}
+<grid-list class='swiper'>
+  <div data-swiper-wrapper class='container-full flex grid-desktop text-white swiper-wrapper lg:!grid lg:gap-4'>
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign b = block.settings
+      -%}
 
-    <div class='relative col-span-full overflow-hidden rounded lg:col-span-3'>
-      {%- render 'component.image', image: b.image, lazyload: false -%}
+      <div class='relative col-span-full overflow-hidden rounded lg:col-span-3 swiper-slide grow shrink-0 basis-2/3 mr-2.5 lg:basis-1/4 lg:mr-0'>
+        {%- render 'component.image', image: b.image, lazyload: false -%}
 
-      <div class='absolute top-6 w-full text-center text-body-xs'>
-        {{- b.subtitle -}}
+        <div class='absolute top-6 w-full text-center text-body-xs'>
+          {{- b.subtitle -}}
+        </div>
+
+        <div class='absolute bottom-8 w-full'>
+          <{{ s.title_tag }} class='text-label-1 mb-4 text-center font-bold uppercase'>
+            {{- b.title -}}
+          </{{ s.title_tag }}>
+
+          <button href='{{- b.button_url -}}' class='{{- b.button_style }} mx-auto flex'>
+            {{- b.button_text -}}
+          </button>
+        </div>
       </div>
-
-      <div class='absolute bottom-8 w-full'>
-        <{{ s.title_tag }} class='text-label-1 mb-4 text-center font-bold uppercase'>
-          {{- b.title -}}
-        </{{ s.title_tag }}>
-
-        <button href='{{- b.button_url -}}' class='{{- b.button_style }} mx-auto flex'>
-          {{- b.button_text -}}
-        </button>
-      </div>
-    </div>
-  {%- endfor -%}
-</div>
+    {%- endfor -%}
+  </div>
+</grid-list>
 
 {% schema %}
 {

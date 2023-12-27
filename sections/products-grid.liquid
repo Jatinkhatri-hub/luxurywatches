@@ -4,20 +4,20 @@
 
 <div class='container-full grid-desktop'>
   <{{ s.title_tag }}
-    class='gradient-heading text-heading-4 font-bold'
+    class='gradient-heading text-heading-4-mobile lg:text-heading-4 font-bold'
   >
     {{- s.title -}}
   </{{ s.title_tag }}>
 
   <div class='grid-desktop col-span-full gap-2 lg:gap-5'>
     {%- for product in s.products -%}
-      <div class='relative col-span-full flex flex-col rounded bg-grey lg:col-span-3'>
+      <div class='relative col-span-full flex flex-row-reverse items-center lg:items-start lg:flex-col rounded bg-grey lg:col-span-3'>
         <a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
-        {%- render 'component.image', image: product.featured_image -%}
+        {%- render 'component.image', image: product.featured_image, picture_class: 'basis-1/2 lg:basis-full' -%}
 
-        <div class='bg-grey p-3 text-body-xs lg:p-5 lg:text-body'>
+        <div class='bg-grey text-body-mobile lg:text-body-xs lg:p-5 lg:text-body basis-1/2 lg:basis-full'>
           <h3 class='text-content mb-2 font-body'>{{- product.title -}}</h3>
-          <p class='font-heading text-body-sm font-bold tracking-normal text-accent'>
+          <p class='font-heading text-body-mobile lg:text-body-sm font-bold tracking-normal text-accent'>
             {{- product.price | money_without_trailing_zeros -}}
           </p>
         </div>

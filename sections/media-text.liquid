@@ -22,12 +22,12 @@
       {% endif %}
       class='col-span-full row-start-2 bg-[rgb(29,30,30)] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'
     >
-      <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center p-5 text-center'>
-        <{{ s.title_tag }} class='mb-4 text-heading-5 font-semibold uppercase lg:text-heading-4'>
+      <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center py-4 px-2 lg:p-5 text-center'>
+        <{{ s.title_tag }} class='mb-4 text-heading-4-mobile font-semibold uppercase lg:text-heading-4'>
           {{- s.title -}}
         </{{ s.title_tag }}>
 
-        <div class='mb-6 text-body-xs opacity-60 lg:text-body-sm'>{{- s.body -}}</div>
+        <div class='mb-6 text-body-mobile opacity-60 lg:text-body-sm'>{{- s.body -}}</div>
 
         <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
           {{- s.button_text -}}

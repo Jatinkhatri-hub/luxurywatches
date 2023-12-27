@@ -43,6 +43,34 @@ module.exports = {
             letterSpacing: '1.8px',
           },
         ],
+        'heading-1-mobile': [
+          '46px',
+          {
+            lineHeight: '100%',
+            letterSpacing: '-1.8px',
+          },
+        ],
+        'heading-2-mobile': [
+          '34px',
+          {
+            lineHeight: '100%',
+            letterSpacing: '-1.36px',
+          },
+        ],
+        'heading-3-mobile': [
+          '28px',
+          {
+            lineHeight: '100%',
+            letterSpacing: '-1.12px',
+          },
+        ],
+        'heading-4-mobile': [
+          '22px',
+          {
+            lineHeight: '100%',
+            letterSpacing: '-0.8px',
+          },
+        ],
         'body-sm': [
           '20px',
           {
@@ -51,6 +79,12 @@ module.exports = {
           },
         ],
         'body-xs': [
+          '18',
+          {
+            lineHeight: '110%',
+          },
+        ],
+        'body-mobile': [
           '18',
           {
             lineHeight: '110%',

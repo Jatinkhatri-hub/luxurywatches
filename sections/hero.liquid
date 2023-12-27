@@ -12,16 +12,16 @@
   {%- endif -%}
 
   {%- if s.video and s.video != blank -%}
-    {%- render 'video', video: s.video, class: 'rounded overflow-hidden max-h-[700px]', video_class: 'h-full w-full' -%}
+    {%- render 'video', video: s.video, class: 'rounded overflow-hidden max-h-[700px]', video_class: 'h-full w-full', loop: true -%}
   {%- endif -%}
 
-  <div class='absolute bottom-0 left-1/2 w-full max-w-full -translate-x-1/2 px-10 py-10 text-center text-white lg:bottom-10 lg:px-0'>
+  <div class='absolute bottom-0 left-1/2 w-full max-w-full -translate-x-1/2 px-4 py-10 text-center text-white lg:bottom-10 lg:px-0'>
     {%- if s.title != blank -%}
-      <{{ s.title_tag }} class='px-6 text-heading-4 font-bold uppercase lg:text-heading-1'>
+      <{{ s.title_tag }} class='lg:px-6 text-heading-1-mobile font-bold uppercase lg:text-heading-1'>
         {{- s.title -}}
       </{{ s.title_tag }}>
 
-      <div class='mx-auto mb-6 mt-2 max-w-[40rem] text-body-xs lg:mt-0 lg:text-body'>
+      <div class='mx-auto mb-6 mt-2 max-w-[40rem] text-body-mobile lg:mt-0 lg:text-body'>
         {{- s.body -}}
       </div>
 
