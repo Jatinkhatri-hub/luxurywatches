@@ -13,7 +13,7 @@
       <ul class='flex h-full items-center space-x-4 pt-2 font-heading text-menu uppercase'>
         {%- if s.menu != blank -%}
           {% for link in linklists[s.menu].links -%}
-            <li class='pb-4 {% if link.links != blank %}flex items-center group h-full{%- endif -%}'>
+            <li class='pb-4 {% if link.links != blank %}flex items-center group/link h-full{%- endif -%}'>
               <a
                 class='animated-link flex items-center space-x-1.5 leading-normal'
                 href='{{- link.url -}}'
@@ -26,7 +26,7 @@
                     <div class=''>
                       {%- render 'icon',
                         icon: 'icon-down',
-                        class: 'group-hover:rotate-180 transition-transform duration-300'
+                        class: 'group-hover/link:rotate-180 transition-transform duration-300'
                       -%}
                     </div>
                   </span>
@@ -42,7 +42,7 @@
                 %}
 
                 {% if link_title == b.match_menu %}
-                  <ul class='animation-appereance bg-theme pointer-events-none absolute left-0 top-[120px] w-full rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100 grid grid-cols-2 lg:grid-cols-8 gap-5'>
+                  <ul class='animation-appereance bg-theme pointer-events-none absolute left-0 top-32 w-full rounded p-5 text-menu-sm opacity-0 shadow-md group-hover/link:pointer-events-auto group-hover/link:opacity-100 duration-300 transition-all grid grid-cols-2 lg:grid-cols-8 gap-5'>
                     {% for collection in b.collection_list %}
                       <li class='col-span-1 rounded overflow-hidden relative'>
                         <a href="{{ collection.url }}" class='absolute w-full h-full inset-0'></a>
@@ -65,7 +65,7 @@
   
               {% comment %} Default submenu {% endcomment %}
               {%- if link.links != blank and link_title != b.match_menu -%}
-                <ul class='animation-appereance bg-theme pointer-events-none absolute -left-[15%] top-5 w-[130%] space-y-2.5 rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100'>
+                <ul class='animation-appereance bg-theme pointer-events-none absolute -left-[15%] top-5 w-[130%] space-y-2.5 rounded p-5 text-menu-sm opacity-0 shadow-md group-hover/link:pointer-events-auto group-hover/link:opacity-100'>
                   {%- for child_link in link.links -%}
                     <li>
                       <a class='animated-link text-menu leading-normal' href='{{- child_link.url -}}'>
