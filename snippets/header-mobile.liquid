@@ -1,11 +1,17 @@
-<div class='hidden lg:flex items-center justify-between'>
-  <div class='flex gap-1'>
-    {% render 'icon', icon: 'account' %}
+<div class='flex items-center justify-between lg:hidden'>
+  <div class='flex gap-1 items-center'>
+		<div 
+			class='cursor-pointer'
+			data-toggle-menu
+		>
+			{% render 'icon', icon: 'menu', class: 'pointer-events-none' %}
+			{% render 'icon', icon: 'close', class: 'pointer-events-none hidden' %}
+		</div>
     {% render 'icon', icon: 'search' %}
   </div>
 
   <div class='flex flex-col items-center'>
-    <a class='mx-auto mb-2 w-full max-w-[4.75rem]' href='/'>
+    <a class='w-16' href='/'>
       {%- render 'component.image', image: s.logo -%}
     </a>
   
@@ -13,7 +19,7 @@
       <ul class='flex h-full items-center space-x-4 pt-2 font-heading text-menu uppercase'>
         {%- if s.menu != blank -%}
           {% for link in linklists[s.menu].links -%}
-            <li class='pb-4 {% if link.links != blank %}flex items-center group h-full{%- endif -%}'>
+            <li class='{%- if link.links != blank -%}flex items-center group relative h-full{%- endif -%}'>
               <a
                 class='animated-link flex items-center space-x-1.5 leading-normal'
                 href='{{- link.url -}}'
@@ -32,39 +38,8 @@
                   </span>
                 {%- endif -%}
               </a>
-
-              
-              {% comment %} Custom submenu {% endcomment %}
-              {% for block in section.blocks %}
-                {% liquid
-                  assign link_title = link.title | downcase
-                  assign b = block.settings 
-                %}
-
-                {% if link_title == b.match_menu %}
-                  <ul class='animation-appereance bg-theme pointer-events-none absolute left-0 top-[120px] w-full rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100 grid grid-cols-2 lg:grid-cols-8 gap-5'>
-                    {% for collection in b.collection_list %}
-                      <li class='col-span-1 rounded overflow-hidden relative'>
-                        <a href="{{ collection.url }}" class='absolute w-full h-full inset-0'></a>
-
-                        <div>
-                          {% render 'component.image', 
-                            image: collection.featured_image, 
-                            class: 'aspect-[1/1.2]' 
-                          %}
-                        </div>
-
-                        <div class="py-4 bg-black text-content text-menu uppercase font-heading text-center">
-                          {{ collection.title }}
-                        </div>
-                      </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-              {% endfor %}
   
-              {% comment %} Default submenu {% endcomment %}
-              {%- if link.links != blank and link_title != b.match_menu -%}
+              {%- if link.links != blank -%}
                 <ul class='animation-appereance bg-theme pointer-events-none absolute -left-[15%] top-5 w-[130%] space-y-2.5 rounded p-5 text-menu-sm opacity-0 shadow-md group-hover:pointer-events-auto group-hover:opacity-100'>
                   {%- for child_link in link.links -%}
                     <li>

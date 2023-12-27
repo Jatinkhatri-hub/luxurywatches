@@ -3,12 +3,9 @@
 -%}
 
 {%- if s.menu_left != blank or s.logo != blank or s.menu_right != blank or s.button_text != blank -%}
-  <header class='min-h-20 bg-theme flex items-center py-2 shadow-sm'>
-    <div class='container-full flex justify-between'>
-      <a class='w-full max-w-[2.75rem] lg:hidden' href='/'>
-        {%- render 'component.image', image: s.logo, class: '!object-contain' -%}
-      </a>
-
+  <header class='min-h-20 bg-theme flex items-center pt-2 shadow-sm relative'>
+    <div class='container-full'>
+      {%- render 'header-mobile', s: s -%}
       {%- render 'header-desktop', s: s -%}
     </div>
   </header>
@@ -32,6 +29,26 @@
     {
       "type": "header",
       "content": "Button"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Submenu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "match_menu",
+          "label": "Match Menu",
+          "info": "Match the menu item to open the submenu"
+        },
+        {
+          "type": "collection_list",
+          "id": "collection_list",
+          "label": "Collections",
+          "limit": 8
+        }
+      ]
     }
   ],
   "presets": [
