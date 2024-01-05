@@ -21,21 +21,23 @@
 		</div>
 	{% endif %}
 
-	<div class='gradient-heading flex flex-col text-center items-center justify-center'>
-		{% if s.title != blank and s.title %}
-			<{{ s.title_tag }}
-				class='text-heading-4-mobile lg:text-heading-4 font-bold'
-			>
-				{{- s.title -}}
-			</{{ s.title_tag }}>
-		{% endif %}
+  {% if s.title != blank or s.body != blank %}
+    <div class='gradient-heading flex flex-col text-center items-center justify-center'>
+      {% if s.title != blank and s.title %}
+        <{{ s.title_tag }}
+          class='text-heading-4-mobile lg:text-heading-4 font-bold'
+        >
+          {{- s.title -}}
+        </{{ s.title_tag }}>
+      {% endif %}
 
-		{% if s.body != blank and s.body %}
-			<div class='text-body-sm text-gray'>
-				{{- s.body -}}
-			</div>
-		{% endif %}
-	</div>
+      {% if s.body != blank and s.body %}
+        <div class='text-body-sm text-gray'>
+          {{- s.body -}}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
 
   <div class='grid grid-cols-16 col-span-full gap-2 lg:gap-5'>
     {%- for product in s.collection.products limit: 8 -%}

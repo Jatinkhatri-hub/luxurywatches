@@ -20,12 +20,14 @@
       data-aos-duration="1000"
       class='mb-4 lg:mb-10 max-w-2xl text-body-mobile lg:text-body-xs'>{{- s.body -}}</div>
 
-    <button 
-      data-aos="fade-in"
-      data-aos-duration="1000"
-      href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
-      {{- s.button_text -}}
-    </button>
+    {% if s.button_text != blank and s.button_style != blank %}
+      <button 
+        data-aos="fade-in"
+        data-aos-duration="1000"
+        href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
+        {{- s.button_text -}}
+      </button>
+    {% endif %}
   </div>
 </div>
 
