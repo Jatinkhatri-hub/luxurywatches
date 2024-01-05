@@ -1,8 +1,146 @@
 {
   "sections": {
     "page": {
-      "type": "page"
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "9cf1490b-61a6-4f82-85c3-3f374db34cc5": {
+      "type": "collection-hero",
+      "settings": {
+        "title": "All Watches",
+        "title_tag": "h2",
+        "body": "<p>Fashion avant-garde, extraordinary performance. Inheriting the rigorous attitude of Japan precision watch making. Designed by gentlemen, for gentlemen.<\/p>",
+        "text_style": "text-accent",
+        "image": "shopify:\/\/shop_images\/Section_--_HERO_3.png",
+        "enable_background_pattern": false
+      }
+    },
+    "92051b97-771c-4393-a3e7-420f10f74366": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "a541b047-5331-4cbf-bffa-7c691c484c7f": {
+      "type": "collection-products",
+      "settings": {
+        "title": "OUR BEST SELLERS",
+        "title_tag": "h2",
+        "body": "",
+        "collection": "all-watches",
+        "enable_background_pattern": false
+      }
+    },
+    "c0ac41c1-e271-43d3-b4d4-9bbca597af93": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "db4b1b56-4ba6-4bf4-82a8-c722e5ad5dc8": {
+      "type": "collection-products",
+      "settings": {
+        "title": "GLADIATOR WATCHES",
+        "title_tag": "h2",
+        "body": "watches for the world conquerors",
+        "collection": "all-watches",
+        "enable_background_pattern": true
+      }
+    },
+    "3a25bfcb-8b83-48cc-bb3f-9eadfec43a19": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "6a12dc00-d23f-4c8e-acdd-a8c7b8ad0f77": {
+      "type": "collection-products",
+      "settings": {
+        "title": "GLADIATOR WATCHES",
+        "title_tag": "h2",
+        "body": "watches for the world conquerors",
+        "collection": "all-watches",
+        "background_image": "shopify:\/\/shop_images\/product_image_no_bg.png",
+        "enable_background_pattern": false
+      }
+    },
+    "f49b2e69-8570-453f-97b9-089677222301": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "ca1c62c8-6bec-4bb2-aba4-5a07fa2a1554": {
+      "type": "collection-products",
+      "settings": {
+        "title": "GLADIATOR WATCHES",
+        "title_tag": "h2",
+        "body": "watches for the world conquerors",
+        "collection": "all-watches",
+        "enable_background_pattern": false
+      }
+    },
+    "c78fb211-ab2f-4ae2-a9b4-4abdae5af761": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-5",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "3250be06-2981-41ab-99d6-4501fc36ff9d": {
+      "type": "collection-products",
+      "settings": {
+        "title": "GLADIATOR WATCHES",
+        "title_tag": "h2",
+        "body": "watches for the world conquerors",
+        "collection": "all-watches",
+        "background_image": "shopify:\/\/shop_images\/product_image_no_bg_2.png",
+        "enable_background_pattern": false
+      }
+    },
+    "c2efeac6-6d6f-4528-94af-5566e7ee3087": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "f38e2ce0-1c0c-4969-9aba-b4de3d707297": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Subscribe to the latest news",
+        "title_tag": "h2",
+        "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>",
+        "enable_background_pattern": true
+      }
     }
   },
-  "order": ["page"]
+  "order": [
+    "page",
+    "9cf1490b-61a6-4f82-85c3-3f374db34cc5",
+    "92051b97-771c-4393-a3e7-420f10f74366",
+    "a541b047-5331-4cbf-bffa-7c691c484c7f",
+    "c0ac41c1-e271-43d3-b4d4-9bbca597af93",
+    "db4b1b56-4ba6-4bf4-82a8-c722e5ad5dc8",
+    "3a25bfcb-8b83-48cc-bb3f-9eadfec43a19",
+    "6a12dc00-d23f-4c8e-acdd-a8c7b8ad0f77",
+    "f49b2e69-8570-453f-97b9-089677222301",
+    "ca1c62c8-6bec-4bb2-aba4-5a07fa2a1554",
+    "c78fb211-ab2f-4ae2-a9b4-4abdae5af761",
+    "3250be06-2981-41ab-99d6-4501fc36ff9d",
+    "c2efeac6-6d6f-4528-94af-5566e7ee3087",
+    "f38e2ce0-1c0c-4969-9aba-b4de3d707297"
+  ]
 }
