@@ -2,11 +2,127 @@
   "sections": {
     "page": {
       "type": "page",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "dd3debba-62b9-40b4-8e4a-1bac925c13b5": {
+      "type": "collection-hero",
+      "settings": {
+        "title": "Explorer Collection",
+        "title_tag": "h2",
+        "body": "<p>Fashion avant-garde, extraordinary performance. Inheriting the rigorous attitude of Japan precision watch making. Designed by gentlemen, for gentlemen.<\/p>",
+        "text_style": "text-accent",
+        "image": "shopify:\/\/shop_images\/Section_--_HERO_df83c31a-cb32-4a88-be9e-fa85c6001332.png",
+        "enable_background_pattern": true
+      }
+    },
+    "13726e26-65e2-49af-8d2b-09973046aa44": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-10",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-6"
+      }
+    },
+    "bcfa4c4c-09b6-4b98-94c4-872146e3689d": {
+      "type": "collection-products",
+      "settings": {
+        "title": "",
+        "title_tag": "h2",
+        "body": "",
+        "collection": "all-watches",
+        "enable_background_pattern": false
+      }
+    },
+    "9b3b8393-97da-4007-8704-dcd040d7712b": {
+      "type": "media-text",
+      "settings": {
+        "title": "Multilayer Dial",
+        "title_tag": "h2",
+        "heading_style": "lg:text-heading-3 text-accent",
+        "body": "<p>In order to reduce the thickness of the case, the dial is composed of three superimposed layers, the first of which completely replaces the spacer ring. This truly unique solution is protected by the filing of patent no. 102021000031718.<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "button-accent",
+        "image": "shopify:\/\/shop_images\/Image_Wrap_65ac956d-9bd0-4fdf-acbf-41ec40878bf4.png",
+        "image_alignment": "left",
+        "enable_background_pattern": true
+      }
+    },
+    "a33b695d-702f-490a-8241-0b23222c696f": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-5",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-10"
+      }
+    },
+    "cb779a35-f581-4d87-8e9e-03eb942f1b7b": {
+      "type": "banner",
+      "settings": {
+        "title": "THE MOST INNOVATIVE ENGINEERING APPROACH",
+        "title_tag": "h2",
+        "heading_style": "lg:text-heading-3 text-accent",
+        "body": "<p>Explorer Collection is the most innovative watch in the Alandium series. It draws inspiration from the fastest cars in the world....<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "button-accent",
+        "image": "shopify:\/\/shop_images\/Blog_Wrap.png"
+      }
+    },
+    "66f60785-472a-4aef-bed7-a5a4a0c3c924": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-5",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-10"
+      }
+    },
+    "e1bb2812-6dcd-4bf1-bffe-6eb8edf9ac7f": {
+      "type": "media-text",
+      "settings": {
+        "title": "Golden ratio",
+        "title_tag": "h2",
+        "heading_style": "lg:text-heading-3 text-accent",
+        "body": "<p>Nereide Ultraleggero embodies a sophisticated, technical and innovative design. The dial of the watch is harmoniously balanced following the mathematical ratio of the golden ration of Leonardo da Vinci. This gives a balanced arrangement of the elements, forming a fascinating and structured aesthetic.<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "button-accent",
+        "image": "shopify:\/\/shop_images\/Image_Wrap_2e8224cd-bd4a-4c0b-b9e6-d38408d68c04.png",
+        "image_alignment": "right",
+        "enable_background_pattern": true
+      }
+    },
+    "f981828f-d482-4803-9f5e-ad5b69497c28": {
+      "type": "whitespace",
+      "settings": {
+        "whitespace_mobile": "h-5",
+        "whitespace_tablet": "md:h-10",
+        "whitespace_desktop": "lg:h-20"
+      }
+    },
+    "8f007e32-7756-49b0-93b6-f07ef17878d7": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Subscribe to the latest news",
+        "title_tag": "h2",
+        "body": "<p>Subscribe to our newsletter to receive our latest updates and promotions on the most important things <\/p>",
+        "enable_background_pattern": true
       }
     }
   },
   "order": [
-    "page"
+    "page",
+    "dd3debba-62b9-40b4-8e4a-1bac925c13b5",
+    "13726e26-65e2-49af-8d2b-09973046aa44",
+    "bcfa4c4c-09b6-4b98-94c4-872146e3689d",
+    "9b3b8393-97da-4007-8704-dcd040d7712b",
+    "a33b695d-702f-490a-8241-0b23222c696f",
+    "cb779a35-f581-4d87-8e9e-03eb942f1b7b",
+    "66f60785-472a-4aef-bed7-a5a4a0c3c924",
+    "e1bb2812-6dcd-4bf1-bffe-6eb8edf9ac7f",
+    "f981828f-d482-4803-9f5e-ad5b69497c28",
+    "8f007e32-7756-49b0-93b6-f07ef17878d7"
   ]
 }
