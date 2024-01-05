@@ -22,16 +22,12 @@
       <{{ s.title_tag }} class='lg:px-6 text-heading-2-mobile font-bold uppercase lg:text-heading-2 text-accent pb-3 leading-none {{ s.text_style }}'>
         {{- s.title -}}
       </{{ s.title_tag }}>
+    {% endif %}
 
+    {%- if s.body != blank -%}
       <div class='mx-auto max-w-[40rem] text-body-mobile lg:text-body'>
         {{- s.body -}}
       </div>
-
-			{%- if s.button_text != blank and s.button_text -%}
-				<button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
-					{{- s.button_text -}}
-				</button>
-			{%- endif -%}
     {%- endif -%}
   </div>
 </div>
@@ -93,7 +89,7 @@
     {
       "type": "select",
       "id": "text_style",
-      "label": "Button Style",
+      "label": "Text Style",
       "default": "text-white",
       "options": [
         {

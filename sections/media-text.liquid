@@ -21,22 +21,24 @@
 
     <div
       {% if s.enable_background_pattern %}
-        style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
+        style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat; background-size: 24px;'
       {% endif %}
       data-aos="fade-in"
       data-aos-duration="1000"
       class='col-span-full row-start-2 bg-[rgb(29,30,30)] lg:col-span-6 lg:row-start-1 {% if s.image_alignment == 'right' %} lg:col-start-1 lg:row-start-1{% endif %}'
     >
       <div class='mx-auto flex h-full max-w-3xl flex-col items-center justify-center py-4 px-2 lg:p-5 text-center'>
-        <{{ s.title_tag }} class='mb-4 text-heading-4-mobile font-semibold uppercase lg:text-heading-4'>
+        <{{ s.title_tag }} class='mb-4 text-heading-4-mobile font-semibold uppercase {{ s.heading_style }}'>
           {{- s.title -}}
         </{{ s.title_tag }}>
 
         <div class='mb-6 text-body-mobile opacity-60 lg:text-body-sm'>{{- s.body -}}</div>
 
-        <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
-          {{- s.button_text -}}
-        </button>
+        {% if s.button_text != blank and s.button_url != blank %}
+          <button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
+            {{- s.button_text -}}
+          </button>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -88,6 +90,22 @@
         {
           "value": "p",
           "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_style",
+      "label": "Heading Style",
+      "default": "lg:text-heading-4 text-white",
+      "options": [
+        {
+          "value": "lg:text-heading-4 text-white",
+          "label": "Default"
+        },
+        {
+          "value": "lg:text-heading-3 text-accent",
+          "label": "Accent"
         }
       ]
     },

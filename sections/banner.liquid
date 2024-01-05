@@ -12,7 +12,7 @@
     <{{ s.title_tag }} 
       data-aos="fade-in"
       data-aos-duration="1000"
-      class='mb-5 text-heading-2-mobile font-bold uppercase lg:text-heading-2'>
+      class='mb-5 text-heading-2-mobile font-bold uppercase {{ s.heading_style }}'>
       {{- s.title -}}
     </{{ s.title_tag }}>
     <div 
@@ -75,6 +75,22 @@
         {
           "value": "p",
           "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_style",
+      "label": "Heading Style",
+      "default": "lg:text-heading-2 text-white",
+      "options": [
+        {
+          "value": "lg:text-heading-2 text-white",
+          "label": "Default"
+        },
+        {
+          "value": "lg:text-heading-3 text-accent",
+          "label": "Accent"
         }
       ]
     },

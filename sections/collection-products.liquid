@@ -11,12 +11,13 @@
 			{% render 'component.image', image: s.background_image %}
 		</div>
 	{% endif %}
+  
 
 	{% if s.enable_background_pattern %}
-		<div 
-			style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat'
-			class='absolute inset-0 w-full h-full lg:hidden'
-			>
+		<div
+			style='background: url({{- settings.background_pattern | img_url: '128x' -}}) repeat; background-size: 24px;'
+			class='absolute inset-0 w-full h-full {% if s.background_image != blank %}lg:hidden{% endif %}'
+    >
 		</div>
 	{% endif %}
 
