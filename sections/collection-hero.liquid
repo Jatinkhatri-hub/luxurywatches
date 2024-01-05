@@ -1,0 +1,136 @@
+{% liquid
+	assign s = section.settings
+	assign image = s.image | default: collection.featured_image
+%}
+
+<div class='container-full relative overflow-hidden rounded'>
+  {%- if s.image and s.image != blank and s.video == blank -%}
+    {%- render 'component.image',
+      image: image,
+      lazyload: false,
+      class: 'min-h-[600px] lg:min-h-auto rounded overflow-hidden'
+    -%}
+  {%- endif -%}
+
+  {%- if s.video and s.video != blank -%}
+    {%- render 'video', video: s.video, class: 'rounded overflow-hidden max-h-[700px]', video_class: 'h-full w-full', loop: true -%}
+  {%- endif -%}
+
+  <div
+		class='absolute bottom-0 left-1/2 w-full max-w-full -translate-x-1/2 px-4 py-8 lg:py-10 text-center text-white lg:px-0'>
+    {%- if s.title != blank -%}
+      <{{ s.title_tag }} class='lg:px-6 text-heading-2-mobile font-bold uppercase lg:text-heading-2 text-accent pb-3 leading-none {{ s.text_style }}'>
+        {{- s.title -}}
+      </{{ s.title_tag }}>
+
+      <div class='mx-auto max-w-[40rem] text-body-mobile lg:text-body'>
+        {{- s.body -}}
+      </div>
+
+			{%- if s.button_text != blank and s.button_text -%}
+				<button href='{{- s.button_url -}}' class='{{- s.button_style }} button'>
+					{{- s.button_text -}}
+				</button>
+			{%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "label": "Button Style",
+      "default": "text-white",
+      "options": [
+        {
+          "value": "text-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "text-white",
+          "label": "White"
+        },
+        {
+          "value": "text-accent",
+          "label": "Accent"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+		{
+      "type": "checkbox",
+      "id": "enable_background_pattern",
+      "label": "Enable background pattern",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -110,6 +110,7 @@ module.exports = {
         secondary: 'hsla(var(--color-secondary) / <alpha-value>)',
         theme: 'hsla(var(--color-theme) / <alpha-value>)',
         content: 'hsla(var(--color-text) / <alpha-value>)',
+        gray: '#969696',
       },
       backgroundImage: {
         'gradient-primary':
@@ -118,6 +119,9 @@ module.exports = {
           'radial-gradient(50% 50% at 50% 50%, rgba(72, 250, 249, 0.13) 0%, rgba(130, 207, 207, 0.00) 100%)',
         'gradient-strokes':
           'linear-gradient(90deg, #48faf900, #48FAF9, #48faf900)',
+      },
+      gridTemplateColumns: {
+        16: 'repeat(16, minmax(0, 1fr))',
       },
     },
   },
