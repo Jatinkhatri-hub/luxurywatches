@@ -111,6 +111,7 @@ module.exports = {
         theme: 'hsla(var(--color-theme) / <alpha-value>)',
         content: 'hsla(var(--color-text) / <alpha-value>)',
         gray: '#969696',
+        'accent-hover': '#02B4B3',
       },
       backgroundImage: {
         'gradient-primary':

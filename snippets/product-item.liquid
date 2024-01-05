@@ -1,0 +1,21 @@
+{% comment %} 
+	Accepts: 
+		- product: product object
+		- col_span desktop: 3 or 4
+
+{% endcomment %}
+
+<div class='group relative col-span-full flex flex-row-reverse items-center lg:items-start lg:flex-col rounded bg-grey {% if col_span == 4 %}lg:col-span-4{% else %}lg:col-span-3{% endif %} {{ class }}'>
+	<a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
+	<div class='relative'>
+		{%- render 'component.image', image: product.featured_image, picture_class: 'basis-1/2 lg:basis-full aspect-[1.26/1] group-hover:opacity-0 duration-300 transition-all w-full h-full' -%}
+		{%- render 'component.image', image: product.images[1], picture_class: 'basis-1/2 lg:basis-full absolute top-0 left-0 aspect-[1.26/1] w-full opacity-0 group-hover:opacity-100 duration-300 transition-all h-full' -%}
+	</div>
+
+	<div class='bg-grey text-body-mobile lg:text-body-xs lg:p-5 lg:text-body basis-1/2 lg:basis-full'>
+		<h3 class='text-content mb-2 font-body'>{{- product.title -}}</h3>
+		<p class='font-heading text-body-mobile lg:text-body-sm font-bold tracking-normal text-accent'>
+			{{- product.price | money_without_trailing_zeros -}}
+		</p>
+	</div>
+</div>

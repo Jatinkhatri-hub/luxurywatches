@@ -41,17 +41,18 @@
 
   <div class='grid grid-cols-16 col-span-full gap-2 lg:gap-5'>
     {%- for product in s.collection.products limit: 8 -%}
-      <div class='relative col-span-full flex flex-row-reverse items-center lg:items-start lg:flex-col rounded bg-grey lg:col-span-4 {% if forloop.index == 5 %} lg:col-start-3 {% endif %}'>
-        <a href='{{- product.url -}}' class='absolute inset-0 z-10'></a>
-        {%- render 'component.image', image: product.featured_image, picture_class: 'basis-1/2 lg:basis-full' -%}
+      {% liquid
+        assign product_item_class = ''
+        if forloop.index == 5 
+          assign product_item_class = 'lg:col-start-3'
+        endif 
+      %}
 
-        <div class='bg-grey text-body-mobile lg:text-body-xs lg:p-5 lg:text-body basis-1/2 lg:basis-full'>
-          <h3 class='text-content mb-2 font-body'>{{- product.title -}}</h3>
-          <p class='font-heading text-body-mobile lg:text-body-sm font-bold tracking-normal text-accent'>
-            {{- product.price | money_without_trailing_zeros -}}
-          </p>
-        </div>
-      </div>
+      {% render 'product-item',
+        product: product,
+        col_span: 4,
+        class: product_item_class
+      %}
     {%- endfor -%}
   </div>
 </div>

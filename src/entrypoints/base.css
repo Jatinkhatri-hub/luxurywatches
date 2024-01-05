@@ -53,7 +53,7 @@
   }
 
   .button-accent {
-    @apply animation-appearance border-accent bg-accent font-heading font-black uppercase text-primary hover:bg-transparent hover:text-accent;
+    @apply animation-appearance hover:bg-accent-hover border-accent bg-accent font-heading font-black uppercase text-primary hover:text-primary;
   }
 
   .gradient-heading {
