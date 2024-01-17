@@ -1,54 +1,6 @@
-# Adastra Example With Tailwind ✨
-
-```shell
-npm create adastra@latest -- --template blanklob/adastra/examples/with-tailwind
-```
-
-Using Yarn/PNPM
-
-```bash
-yarn create adastra@latest --template blanklob/adastra/examples/with-tailwind
-# pnpm create adastra@latest --template blanklob/adastra/examples/with-tailwind
-```
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=603560480)
-
-> 🧑‍🚀 **Hey astronaut?** Have fun building Shopify themes with Adastra!
-
-![with-tailwind](https://raw.githubusercontent.com/blanklob/adastra/main/.github/assets/basics-template-banner.png)
-
-## Launch development server
-
-### Using Adastra CLI ✨
-
-To launch the development server for the first time, you will need to replace the development command inside the `package.json` with the following:
-
-```json
-"scripts": {
-  - "dev": "adastra dev",
-  "dev": "adastra dev -s example-store.myshopify.com",
-  ...
-}
-```
-
-> 💡 The command will launch two dev servers, the first for Vite at `localhost:5173` to server static files from the `src` directory and the second for Shopify at `localhost:9292` to serve your theme.
-
-### Using Vite and Shopify CLI
-
-```json
-"scripts": {
-  - "dev": "adastra dev",
-  "dev": "vite",
-  "dev:shopify": "shopify theme dev -s example-store.myshopify.com",
-  "build": "vite build",
-  ...
-}
-```
-
-> 💡 Both commands will launch two dev servers, however you will need to spawn two terminal sessions for each server.
+# Luxury Watches ✨
 
 ## Theme Structure
-
 Inside your Adastra ✨ theme project, you'll see the following folders and files.
 
 1. Most Shopify themes files and folders remain the same.
@@ -79,40 +31,7 @@ Inside your Adastra ✨ theme project, you'll see the following folders and file
 └── package.json
 ```
 
-Adastra ✨ detects entrypoint files automatically in the `entrypoints/` directory. In this case `base.css` for styles and `index.js` for modules.
-
-So everything you import to these two files will be shipped to the theme `assets` folder when building for production.
-
-You can create other folders like `src/utils/` if you want, or a `src/components/` folder for Native/React/Vue/Lit/Preact components. Only the files/modules imported in the entrypoint files will be served by Vite.
-
-Any static assets, like custom fonts, manifest files, `.css.liquid` or `.js.liquid`, can be placed inside the `assets` theme folder, just make sure to add the configuration below to avoid clearing the assets directory when building for production.
-
-```js
-// vite.config.js
-
-import { defineConfig } from 'vite'
-import adastra from 'adastra-plugin'
-
-export default defineConfig({
-  plugins: [adastra()],
-  build: {
-    emptyOutDir: false
-  }
-})
-```
-
 ## Commands
-
-Adastra CLI ✨ is built on top of Shopify CLI 3.X, this means that existing Adastra commands are the same as Shopify's.
-
-```bash
-adastra dev -s example-store.myshopify.com
-# same as shopify theme dev -s example-store.myshopify.com
-```
-
-All commands are run from the root of the theme project, from a terminal:
-
-### Other commands
 
 | Command                | Action                                           |
 | :--------------------- | :----------------------------------------------- |
@@ -122,7 +41,3 @@ All commands are run from the root of the theme project, from a terminal:
 | `npm run check`        | Run theme check to lint the theme |
 | `npm run adastra ...`    | Run CLI commands like `adastra dev`, `adastra check` |
 | `npm run adastra --help` | Get help using the Adastra CLI |
-
-## Want to learn more?
-
-Feel free to check [our documentation](https://docs.blanklob.com) or jump into our [Discord server](https://help.blanklob.com).
